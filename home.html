@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GadgetIndo</title>
+    <link href="assets/css/ouput.css" type="text/css" rel="stylesheet" />
+    <script src="assets/js/darkmode.js"></script>
+</head>
+<body>
+    
+    <!-- Start Header -->
+    <div class="header bg-primary dark:bg-gray-900 p-12 w-full">
+        <div class="grid grid-cols-1 md:grid-cols-2 uppercase text-orange font-bold ">
+            <div class="w-full text-2xl text-center md:text-left">
+                GadgetIndo
+            </div>
+            <div class="w-full mt-8 md:mt-0 text-sm flex items-center justify-center md:justify-end gap-16">
+                <a href="javascript:;">Home</a>
+                <a href="javascript:;">Contact</a>
+                <a href="javascript:;">About</a>
+            </div>
+        </div>
+    </div>
+    <!-- End Header -->
+
+    <!-- Start Main -->
+    <div class="main bg-primary dark:bg-gray-900 w-full md:overflow-hidden">
+        <!-- Start Jumbotron -->
+        <div class="relative landing text-gray-100 overflow-hidden h-96 md:h-screen">
+            <div class="w-full h-full flex">
+                <div class="text-center md:text-left w-full md:w-1/2 p-12">
+                    <div class="title uppercase font-bold text-4xl p-4 md:pl-0">GadgetIndo</div>
+                    <div class="desc text-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam consectetur delectus sunt fuga eum itaque laborum expedita quia quos optio ducimus minus cum ab, laudantium iusto ipsum accusantium et est!</div>
+                </div>
+                <div class="hidden md:block md:w-1/2 animateBlock"></div>
+            </div>
+            <div class="absolute bottom-0 z-10 w-full">
+                <svg class="fill-current text-gray-100 dark:text-dark-primary" viewBox="10 -60 1870 190" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> 
+                    <path d="M977.9,76.2 C475.2,-17.4 0.2,132.5 0.2,132.5 L0.2,275.5 L1891.3,275.5 L1891.3,0.7 C1891.3,0.7 1480.6,169.8 977.9,76.2 Z"></path> 
+                </svg>
+            </div>
+        </div>
+        <!-- End Jumbotron -->
+
+        <!-- Start List Phone -->
+        <div class="list-phone w-full -mt-1/3 bg-gray-100 dark:bg-dark-primary text-gray-700 dark:text-gray-300">
+            <div class="px-12 py-6 w-full div-xiaomi">
+                <div class="title flex items-center">
+                    <div class="uppercase font-bold text-lg ">xiaomi</div>
+                    <div class="mx-4">|</div>
+                    <div class="text-xs"><a href="javascript:;">View All</a></div>
+                </div>
+                <div class="content grid grid-cols-3 md:grid-cols-5 gap-x-4 mt-4"></div>
+            </div>
+            <div class="px-12 py-6 w-full div-apple">
+                <div class="title flex items-center">
+                    <div class="uppercase font-bold text-lg ">apple</div>
+                    <div class="mx-4">|</div>
+                    <div class="text-xs"><a href="javascript:;">View All</a></div>
+                </div>
+                <div class="content grid grid-cols-3 md:grid-cols-5 gap-x-4 mt-4"></div>
+            </div>
+        </div>
+        <!-- End List Phone -->
+    </div>
+    <!-- End Main -->
+
+    <!-- Start Footer -->
+    <div class="footer bg-primary dark:bg-gray-900 p-4 border-t-2 border-gray-500 w-full text-gray-300">
+        <div class="text-center">
+            © 2021 All Right Reserved
+        </div>
+    </div>
+    <!-- End Footer -->
+
+    <!-- Start Toggle Dark Mode -->
+    <div class="toggle-dark-mode fixed bottom-10 right-10 inline-block w-10 select-none z-10">
+        <button type="button" onclick="dark()" class="appearance-none cursor-pointer border-2 border-gray-500 rounded-full p-2 bg-gray-100 text-gray-700 dark:text-gray-300 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-800">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+        </button>
+    </div>
+    <!-- End Toggle Dark Mode -->
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script>
+    function getdata(type){
+        fetch("./data_"+type+".json")
+        .then(response => { return response.json() })
+        .then(data => {
+        let len = data.length > 6 ? 6 : data.length
+        let str = ""
+        for (let i = 0; i < len ; i++) {
+            let item = data[i]
+            let cls = i == (len-1) ? 'block md:hidden' : ''
+            str += '' +
+                '<div class="my-4 '+cls+'">' +
+                    '<a class="img" href="javascript:;"><img class="rounded-xl bg-white" src="'+item.Image+'" alt=""></a>' +
+                    '<a class="name text-xs md:text-base" href="javascript:;">' + item.Title + '</a>' +
+                '</div>'
+        }
+
+        $('.div-'+type+' .content').html(str)
+        });
+    }
+    getdata('xiaomi')
+    getdata('apple')
+
+    function animateSquare(){
+        anime({
+            targets: '.blocks',
+            translateX: () => anime.random(-600, 600),
+            translateY: () => anime.random(-400, 400),
+            easing: 'linear',
+            duration: 5000,
+            delay: anime.stagger(10),
+            complete: animateSquare
+        });
+    }
+
+    for (let i = 0; i < 10; i++) {
+        $('.animateBlock').append('<div class="hidden md:block blocks absolute w-60 h-80 shadow-xl dark:shadow-2xl border-2 border-transparent rounded-xl"></div>');
+    }
+
+    animateSquare()
+</script>
+</html>
