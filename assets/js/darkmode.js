@@ -1,3 +1,16 @@
+document.addEventListener('DOMContentLoaded', init, false);
+
+function init() {
+    if ('serviceWorker' in navigator && navigator.onLine) {
+        navigator.serviceWorker.register('./service-worker.js')
+        .then((reg) => {
+            console.log('Success Run Worker');
+        }, (err) => {
+            console.error('Failed Run Worker', err);
+        });
+    }
+}
+
 function dark(on_load){
     var theme = localStorage.theme
     if (on_load){
