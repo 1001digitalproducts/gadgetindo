@@ -47,7 +47,7 @@
 <body class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300">
     
     <!-- Start Header -->
-    <div class="header bg-dark-primary dark:bg-gray-900 p-12 w-full">
+    <div class="header bg-dark-primary dark:bg-gray-900 px-12 py-8 w-full">
         <div class="grid grid-cols-1 md:grid-cols-2 uppercase text-orange font-bold ">
             <div class="w-full text-base md:text-2xl text-center md:text-left">
                 GadgetIndo
@@ -63,7 +63,7 @@
 
     <!-- Start Content -->
     <div>
-        <div class="px-12 py-6">
+        <div class="px-4 md:px-52 py-6">
             <div class="title grid grid-cols-1 md:grid-cols-2 text-xs md:text-base">
                 <div class="flex items-center justify-center md:justify-start gap-x-6 md:gap-x-8">
                     <div class="uppercase font-bold text-base md:text-lg">xiaomi</div>
@@ -74,7 +74,7 @@
                 </div>
                 <div class="flex items-center justify-center md:justify-end text-xs md:text-base gap-x-4">
                     <div>Review</div>
-                    <div class="py-2 border-b-2 border-blue-500">Specification</div>
+                    <div class="py-2 border-b-2 border-orange">Specification</div>
                     <div>Compare With</div>
                 </div>
             </div>
@@ -83,7 +83,7 @@
                     <div class="flex md:col-span-3 justify-center md:justify-end">
                         <img class="rounded-xl bg-white" src="https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-m4-pro-5g.jpg" alt="">
                     </div>
-                    <div class="border-2 rounded border-blue-500 p-2 text-blue-500 bg-blue-100 md:col-span-2 text-xs md:text-lg">
+                    <div class="border-2 p-2 rounded border-primary dark:border-orange text-primary dark:text-orange bg-blue-100 dark:bg-gray-900 md:col-span-2 text-xs md:text-lg">
                         <div class="div-released">
                             <i class="far fa-calendar mr-2"></i>Released 2021, August 27
                         </div>
@@ -111,7 +111,8 @@
                     </div>
                 </div>
                 <div class="flex items-center text-xs md:text-base my-8 gap-x-4 md:gap-x-8 p-4 uppercase overflow-auto whitespace-nowrap mytabs mytabs-nav">
-                    <div><a href="javascript:;" attr-href="network" class="py-2 border-b-2 border-blue-500">network</a></div>
+                    <div><a href="javascript:;" attr-href="all" class="py-2 border-b-2 border-orange">all</a></div>
+                    <div><a href="javascript:;" attr-href="network">network</a></div>
                     <div><a href="javascript:;" attr-href="launch">launch</a></div>
                     <div><a href="javascript:;" attr-href="body">body</a></div>
                     <div><a href="javascript:;" attr-href="display">display</a></div>
@@ -128,7 +129,7 @@
                 </div>
                 <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4 mytabs-content">
                     <div class="div-network content">
-                        <div class="content-title uppercase font-bold text-blue-500 border-b-2 border-blue-500">
+                        <div class="content-title uppercase font-bold text-orange border-b-2 border-orange">
                             network
                         </div>
                         <div>
@@ -173,11 +174,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="icon-network hidden md:flex justify-center items-center text-blue-500">
+                    <div class="icon-network hidden md:flex justify-center items-center text-orange">
                         <i class="fas fa-wifi fa-7x"></i>
                     </div>
-                    <div class="div-launch" style="display: none">
-                        <div class="content-title uppercase font-bold text-blue-500 border-b-2 border-blue-500">
+                    <div class="div-launch">
+                        <div class="content-title uppercase font-bold text-orange border-b-2 border-orange">
                             launch
                         </div>
                         <div>
@@ -195,11 +196,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="icon-launch hidden justify-center items-center text-blue-500">
+                    <div class="icon-launch hidden md:flex justify-center items-center text-orange">
                         <i class="fas fa-rocket fa-7x"></i>
                     </div>
-                    <div class="div-body" style="display: none">
-                        <div class="content-title uppercase font-bold text-blue-500 border-b-2 border-blue-500">
+                    <div class="div-body">
+                        <div class="content-title uppercase font-bold text-orange border-b-2 border-orange">
                             body
                         </div>
                         <div>
@@ -231,11 +232,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="icon-body hidden justify-center items-center text-blue-500">
+                    <div class="icon-body hidden md:flex justify-center items-center text-orange">
                         <i class="fas fa-mobile fa-7x"></i>
                     </div>
-                    <div class="div-display" style="display: none">
-                        <div class="content-title uppercase font-bold text-blue-500 border-b-2 border-blue-500">
+                    <div class="div-display">
+                        <div class="content-title uppercase font-bold text-orange border-b-2 border-orange">
                             display
                         </div>
                         <div>
@@ -261,7 +262,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="icon-display hidden justify-center items-center text-blue-500">
+                    <div class="icon-display hidden md:flex justify-center items-center text-orange">
                         <i class="fas fa-mobile fa-7x"></i>
                     </div>
                 </div>
@@ -292,12 +293,18 @@
 <script>
     $('.mytabs a').on('click', function() {
         var show_div = $(this).attr('attr-href')
-        $('.mytabs-nav a').removeClass('py-2 border-b-2 border-blue-500')
-        $(this).addClass('py-2 border-b-2 border-blue-500')
+        $('.mytabs-nav a').removeClass('py-2 border-b-2 border-orange')
+        $(this).addClass('py-2 border-b-2 border-orange')
+
         $('.mytabs-content div[class^=div-]').hide()
         $('.mytabs-content div[class^=icon-]').removeClass('md:flex')
         $('.mytabs-content .div-' + show_div).fadeIn()
         $('.mytabs-content .icon-' + show_div).addClass('md:flex')
+
+        if (show_div == 'all'){
+            $('.mytabs-content div[class^=div-]').fadeIn()
+            $('.mytabs-content div[class^=icon-]').addClass('md:flex')
+        }
     })
 </script>
 </html>
