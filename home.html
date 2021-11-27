@@ -18,8 +18,12 @@
     <title>GadgetIndo - Home</title>
     <link rel="manifest" href="./manifest.json">
     <link href="./assets/css/ouput.min.css" type="text/css" rel="stylesheet" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" async>
     <script src="./assets/js/darkmode.js" async></script>
+
+    <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    </noscript>
 </head>
 <body class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300">
     
@@ -134,11 +138,11 @@
     </div>
     <!-- End Toggle Dark Mode -->
 </body>
-<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js" integrity="sha512-K9tDZvc8nQXR1DMuT97sct9f40dilGp97vx7EXjswJA+/mKqJZ8vcZLifZDP+9t08osMLuiIjd4jZ0SM011Q+w==" crossorigin="anonymous" referrerpolicy="no-referrer" async></script>
 <script>
     AOS.init();
+
     function getdata(type){
         fetch("./data_"+type+".json")
         .then(response => { return response.json() })
@@ -160,10 +164,11 @@
                     '</div>'
             }
 
-            $('.div-'+type+' .content').html(str)
+            document.querySelector('.div-'+type+' .content').innerHTML = str
             VanillaTilt.init(document.querySelectorAll(".img-phone"));
         });
     }
+    
     getdata('xiaomi')
     getdata('apple')
 </script>
