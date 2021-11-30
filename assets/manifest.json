@@ -1,0 +1,19 @@
+{
+    "name": "GadgetIndo",
+    "short_name": "GI",
+    "description": "Informasi seluruh Gadget",
+    "lang": "en-IND",
+    "dir": "ltr",
+    "theme_color": "#11325B",
+    "start_url": ".",
+    "background_color": "#f3f4f6",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "./assets/image/icon/icon.png",
+            "sizes": "85x123",
+            "type": "image/png"
+        }
+    ]
+}
