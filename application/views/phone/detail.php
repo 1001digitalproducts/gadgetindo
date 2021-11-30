@@ -16,7 +16,7 @@
     <meta name="msapplication-TileImage" content="<?= base_url() ?>assets/image/icon/icon.png" />
     <meta name="msapplication-TileColor" content="#000000" />
     <title>GadgetIndo - Detail Phone</title>
-    <link rel="manifest" href="<?= base_url() ?>/manifest.json">
+    <link rel="manifest" href="<?= base_url() ?>assets/manifest.json">
     <link href="<?= base_url() ?>assets/css/ouput.min.css" type="text/css" rel="stylesheet" />
     <style>
         ::-webkit-scrollbar {
@@ -42,7 +42,10 @@
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="assets/js/darkmode.js"></script>
+    <script>
+        var base_url = "<?= base_url() ?>"
+    </script>
+    <script src="<?= base_url() ?>assets/js/darkmode.js"></script>
 </head>
 <body class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300">
     
@@ -53,7 +56,7 @@
                 GadgetIndo
             </div>
             <div class="w-full mt-8 md:mt-0 text-xs md:text-sm flex items-center justify-center md:justify-end gap-16">
-                <a href="home.html">Home</a>
+                <a href="<?= base_url() ?>">Home</a>
                 <a href="javascript:;">Contact</a>
                 <a href="javascript:;">About</a>
             </div>

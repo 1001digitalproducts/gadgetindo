@@ -11,14 +11,19 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="GadgetIndo" />
-    <link rel="apple-touch-icon" href="./assets/image/icon/icon.png" />
+    <link rel="apple-touch-icon" href="<?= base_url() ?>assets/image/icon/icon.png" />
     <!-- Mendeklarasikan ikon untuk Windows -->
-    <meta name="msapplication-TileImage" content="./assets/image/icon/icon.png" />
+    <meta name="msapplication-TileImage" content="<?= base_url() ?>assets/image/icon/icon.png" />
     <meta name="msapplication-TileColor" content="#000000" />
     <title>GadgetIndo - Home</title>
-    <link rel="manifest" href="./manifest.json">
-    <link href="<?= base_url() ?>/assets/css/ouput.min.css" type="text/css" rel="stylesheet" />
-    <script src="<?= base_url() ?>/assets/js/darkmode.js" async></script>
+    <link rel="manifest" href="<?= base_url() ?>assets/manifest.json">
+    <link href="<?= base_url() ?>assets/css/ouput.min.css" type="text/css" rel="stylesheet" />
+
+    <script>
+        var base_url = "<?= base_url() ?>"
+    </script>
+    
+    <script src="<?= base_url() ?>assets/js/darkmode.js" async></script>
 
     <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
@@ -154,12 +159,12 @@
                 let cls = i == (len-1) ? 'block md:hidden' : ''
                 str += '' +
                     '<div class="my-4 bg-white p-4 rounded-lg '+cls+'">' +
-                        '<a href="phone_detail.html"><img class="img-phone rounded-xl mx-auto pb-4" style="transform-style: preserve-3d; transform: perspective(1000px);" src="'+item.Image+'" alt="'+item.Title+'"></a>' +
-                        '<a class="name text-xs md:text-base" href="phone_detail.html">' + item.Title + '</a>' +
+                        '<a href="<?= base_url() ?>phone/'+ item.Title +'"><img class="img-phone rounded-xl mx-auto pb-4" style="transform-style: preserve-3d; transform: perspective(1000px);" src="'+item.Image+'" alt="'+item.Title+'"></a>' +
+                        '<a class="name text-xs md:text-base" href="<?= base_url() ?>phone/'+ item.Title +'">' + item.Title + '</a>' +
                         '<div class="mt-4 mb-2">'+
-                            '<a class="name text-xs" href="phone_detail.html">View Detail</a>' +
+                            '<a class="name text-xs" href="<?= base_url() ?>phone/'+ item.Title +'">View Detail</a>' +
                             '<span class="px-2">|</span>' + 
-                            '<a class="name text-xs" href="phone_detail.html">Share</a>' +
+                            '<a class="name text-xs" href="<?= base_url() ?>phone/'+ item.Title +'">Share</a>' +
                         '</div>' +
                     '</div>'
             }
