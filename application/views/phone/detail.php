@@ -53,7 +53,7 @@
     <div class="header bg-dark-primary dark:bg-gray-900 px-12 py-8 w-full">
         <div class="grid grid-cols-1 md:grid-cols-2 uppercase text-orange font-bold ">
             <div class="w-full text-base md:text-2xl text-center md:text-left">
-                GadgetIndo
+                <a href="<?= base_url() ?>">GadgetIndo</a>
             </div>
             <div class="w-full mt-8 md:mt-0 text-xs md:text-sm flex items-center justify-center md:justify-end gap-16">
                 <a href="<?= base_url() ?>">Home</a>
@@ -78,7 +78,7 @@
                 <div class="flex items-center justify-center md:justify-end text-xs md:text-base gap-x-4">
                     <div>Review</div>
                     <div class="py-2 border-b-2 border-orange">Specification</div>
-                    <div><a href="compare.html">Compare With</a></div>
+                    <div><a href="<?= base_url() ?>/phone-compare/<?= $phone ?>">Compare With</a></div>
                 </div>
             </div>
             <div class="content mt-8 gap-y-4">
