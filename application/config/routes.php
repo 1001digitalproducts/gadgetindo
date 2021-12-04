@@ -53,5 +53,6 @@ $route['default_controller'] = 'home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+$route['roadmap'] = "home/roadmap";
 $route['phone/(:any)'] = "phone/detail/$1";
 $route['phone-compare/(:any)'] = "phone/compare/$1";

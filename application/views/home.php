@@ -38,10 +38,11 @@
             <div class="w-full text-2xl text-center md:text-left">
                 GadgetIndo
             </div>
-            <div class="w-full mt-8 md:mt-0 text-sm flex items-center justify-center md:justify-end gap-16">
+            <div class="w-full mt-8 md:mt-0 text-xs md:text-sm flex items-center justify-center md:justify-end gap-8 md:gap-16">
                 <a href="javascript:;">Home</a>
                 <a href="javascript:;">Contact</a>
                 <a href="javascript:;">About</a>
+                <a href="<?= base_url()?>roadmap">Roadmap</a>
             </div>
         </div>
     </div>
