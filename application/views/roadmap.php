@@ -18,35 +18,14 @@
     <title>GadgetIndo - Roadmap</title>
     <link rel="manifest" href="<?= base_url() ?>assets/manifest.json">
     <link href="<?= base_url() ?>assets/css/ouput.min.css" type="text/css" rel="stylesheet" />
+    <link href="<?= base_url() ?>assets/css/custom.css" type="text/css" rel="stylesheet" />
 
     <style>
-        ::-webkit-scrollbar {
-            width: 16px;
-            height: 8px;
-        }
-
-        /* Track */
-        ::-webkit-scrollbar-track {
-            border-radius: 100vh;
-            background: transparent;
-        }
-
-        /* Handle */
-        ::-webkit-scrollbar-thumb {
-            background: #cbd5e0;
-            border-radius: 100vh;
-        }
-
-        /* Handle on hover */
-        ::-webkit-scrollbar-thumb:hover {
-            background: #a0aec0;
-        }
-
         .list-custom {
             list-style: none;
         }
 
-        ul.list-custom li::before {
+        .list-custom li::before {
             list-style-position: inside;
             content: "o";
             color: #FF9E01;
@@ -54,7 +33,7 @@
             width: 1em;
         }
 
-        ul.list-custom li.active::before {
+        .list-custom .active::before {
             font-weight: bold;
             content: "•";
             font-size: 20px;
@@ -114,6 +93,20 @@
                                 <li>Search, Filter & Share Phone</li>
                                 <li>All Phone</li>
                                 <li>Phone Compare</li>
+                                <li>History Log User</li>
+                                <li>History Page</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute mt-8 -ml-8 md:block md:-mt-4 md:ml-0 z-20 bg-gray-100 dark:bg-gray-800 border border-orange shadow-xl w-8 h-8 rounded-full"></div>
+                        <div class="mt-4 py-4 px-4 md:px-0">
+                            <h3 class="mb-3 font-bold text-xl">Februari 2022</h3>
+                            <ul class="text-sm list-custom">
+                                <li>Phone Compare</li>
+                                <li>Popular Phone</li>
+                                <li>Trending Phone</li>
+                                <li>Top 100 Phone</li>
                             </ul>
                         </div>
                     </div>
@@ -122,22 +115,10 @@
                         <div class="mt-4 py-4 px-4 md:px-0">
                             <h3 class="mb-3 font-bold text-xl">Maret 2022</h3>
                             <ul class="text-sm list-custom">
-                                <li>360 image phone</li>
-                                <li>Laptop List</li>
-                                <li>Laptop Detail</li>
-                                <li>Camera List</li>
-                                <li>Camera Detail</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="relative">
-                        <div class="absolute mt-8 -ml-8 md:block md:-mt-4 md:ml-0 z-20 bg-gray-100 dark:bg-gray-800 border border-orange shadow-xl w-8 h-8 rounded-full"></div>
-                        <div class="mt-4 py-4 px-4 md:px-0">
-                            <h3 class="mb-3 font-bold text-xl">April 2022</h3>
-                            <ul class="text-sm list-custom">
-                                <li>Member Area</li>
-                                <li>Beranda</li>
-                                <li>Footage</li>
+                                <li>Blog</li>
+                                <li>News</li>
+                                <li>Prosesor List</li>
+                                <li>Prosesor Detail</li>
                             </ul>
                         </div>
                     </div>

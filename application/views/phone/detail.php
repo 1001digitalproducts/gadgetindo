@@ -18,29 +18,7 @@
     <title>GadgetIndo - Detail Phone</title>
     <link rel="manifest" href="<?= base_url() ?>assets/manifest.json">
     <link href="<?= base_url() ?>assets/css/ouput.min.css" type="text/css" rel="stylesheet" />
-    <style>
-        ::-webkit-scrollbar {
-            width: 16px;
-            height: 8px;
-        }
-
-        /* Track */
-        ::-webkit-scrollbar-track {
-            border-radius: 100vh;
-            background: transparent;
-        }
-
-        /* Handle */
-        ::-webkit-scrollbar-thumb {
-            background: #cbd5e0;
-            border-radius: 100vh;
-        }
-
-        /* Handle on hover */
-        ::-webkit-scrollbar-thumb:hover {
-            background: #a0aec0;
-        }
-    </style>
+    <link href="<?= base_url() ?>assets/css/custom.css" type="text/css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script>
         var base_url = "<?= base_url() ?>"

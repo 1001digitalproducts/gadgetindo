@@ -18,6 +18,7 @@
     <title>GadgetIndo - Home</title>
     <link rel="manifest" href="<?= base_url() ?>assets/manifest.json">
     <link href="<?= base_url() ?>assets/css/ouput.min.css" type="text/css" rel="stylesheet" />
+    <link href="<?= base_url() ?>assets/css/custom.css" type="text/css" rel="stylesheet" />
 
     <script>
         var base_url = "<?= base_url() ?>"
@@ -106,21 +107,61 @@
         <div class="w-full">
             <input type="text" class="p-2 bg-transparent outline-none font-bold text-lg border-b-2 border-gray-300 dark:border-gray-700 transition-colors focus:border-orange duration-500 w-full" value="" placeholder="Cari Gadget">
         </div>
-        <div class="py-6 w-full div-xiaomi">
+        <div class="py-6 w-full">
             <div class="title flex items-center">
                 <div class="uppercase font-bold text-lg ">xiaomi</div>
                 <div class="mx-4">|</div>
                 <div class="text-xs"><a href="javascript:;">View All</a></div>
             </div>
-            <div class="content grid grid-cols-2 md:grid-cols-5 gap-x-4 mt-4"></div>
+            <div class="content grid grid-cols-2 md:grid-cols-5 gap-x-4 mt-4">
+                <?php 
+                    $cnt = 0;
+                    $len = count($data_xiaomi) > 6 ? 6 : count($data_xiaomi);
+                    for ($i = 0; $i < $len; $i++){
+                        $cls = $i == ($len-1) ? 'block md:hidden' : ''
+                ?>
+                <div class="my-4 bg-white hover:-my-8 dark:bg-gray-700 p-4 rounded-lg <?= $cls ?>" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="<?= $cnt ?>">
+                    <a href="<?= base_url() ?>phone/<?= $data_xiaomi[$i]->Title ?>"><img class="img-phone rounded-xl mx-auto pb-4" style="transform-style: preserve-3d; transform: perspective(1000px);" src="<?= $data_xiaomi[$i]->Image ?>" alt="<?= $data_xiaomi[$i]->Title ?>"></a>
+                    <a class="name text-xs md:text-base" href="<?= base_url() ?>phone/<?= $data_xiaomi[$i]->Title ?>"><?= $data_xiaomi[$i]->Title ?></a>
+                    <div class="mt-4 mb-2">
+                        <a class="name text-xs" href="<?= base_url() ?>phone/<?= $data_xiaomi[$i]->Title ?>">View Detail</a>
+                        <span class="px-2">|</span>
+                        <a class="name text-xs" href="<?= base_url() ?>phone/<?= $data_xiaomi[$i]->Title ?>">Share</a>
+                    </div>
+                </div>
+                <?php 
+                        $cnt += 100;
+                    } 
+                ?>
+            </div>
         </div>
-        <div class="py-6 w-full div-apple">
+        <div class="py-6 w-full">
             <div class="title flex items-center">
                 <div class="uppercase font-bold text-lg ">apple</div>
                 <div class="mx-4">|</div>
                 <div class="text-xs"><a href="javascript:;">View All</a></div>
             </div>
-            <div class="content grid grid-cols-2 md:grid-cols-5 gap-x-4 mt-4"></div>
+            <div class="content grid grid-cols-2 md:grid-cols-5 gap-x-4 mt-4">
+                <?php 
+                    $cnt = 0;
+                    $len = count($data_apple) > 6 ? 6 : count($data_apple);
+                    for ($i = 0; $i < $len; $i++){
+                        $cls = $i == ($len-1) ? 'block md:hidden' : ''
+                ?>
+                <div class="my-4 bg-white hover:-my-8 dark:bg-gray-700 p-4 rounded-lg <?= $cls ?>" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="<?= $cnt ?>">
+                    <a href="<?= base_url() ?>phone/<?= $data_apple[$i]->Title ?>"><img class="img-phone rounded-xl mx-auto pb-4" style="transform-style: preserve-3d; transform: perspective(1000px);" src="<?= $data_apple[$i]->Image ?>" alt="<?= $data_apple[$i]->Title ?>"></a>
+                    <a class="name text-xs md:text-base" href="<?= base_url() ?>phone/<?= $data_apple[$i]->Title ?>"><?= $data_apple[$i]->Title ?></a>
+                    <div class="mt-4 mb-2">
+                        <a class="name text-xs" href="<?= base_url() ?>phone/<?= $data_apple[$i]->Title ?>">View Detail</a>
+                        <span class="px-2">|</span>
+                        <a class="name text-xs" href="<?= base_url() ?>phone/<?= $data_apple[$i]->Title ?>">Share</a>
+                    </div>
+                </div>
+                <?php 
+                        $cnt += 100;
+                    } 
+                ?>
+            </div>
         </div>
     </div>
     <!-- End List Phone -->
@@ -144,40 +185,7 @@
     <!-- End Toggle Dark Mode -->
 </body>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js" integrity="sha512-K9tDZvc8nQXR1DMuT97sct9f40dilGp97vx7EXjswJA+/mKqJZ8vcZLifZDP+9t08osMLuiIjd4jZ0SM011Q+w==" crossorigin="anonymous" referrerpolicy="no-referrer" async></script>
 <script>
     AOS.init();
-
-    function getdata(type){
-        fetch("<?= base_url() ?>/assets/json/data_"+type+".json")
-        .then(response => { return response.json() })
-        .then(data => {
-            let len = data.length > 6 ? 6 : data.length
-            let str = ""
-            let cnt = 500
-            for (let i = 0; i < len ; i++) {
-                let item = data[i]
-                let cls = i == (len-1) ? 'block md:hidden' : ''
-                str += '' +
-                    '<div class="my-4 bg-white dark:bg-gray-700 p-4 rounded-lg '+cls+'" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="'+cnt+'">' +
-                        '<a href="<?= base_url() ?>phone/'+ item.Title +'"><img class="img-phone rounded-xl mx-auto pb-4" style="transform-style: preserve-3d; transform: perspective(1000px);" src="'+item.Image+'" alt="'+item.Title+'"></a>' +
-                        '<a class="name text-xs md:text-base" href="<?= base_url() ?>phone/'+ item.Title +'">' + item.Title + '</a>' +
-                        '<div class="mt-4 mb-2">'+
-                            '<a class="name text-xs" href="<?= base_url() ?>phone/'+ item.Title +'">View Detail</a>' +
-                            '<span class="px-2">|</span>' + 
-                            '<a class="name text-xs" href="<?= base_url() ?>phone/'+ item.Title +'">Share</a>' +
-                        '</div>' +
-                    '</div>'
-                
-                cnt += 100
-            }
-
-            document.querySelector('.div-'+type+' .content').innerHTML = str
-            VanillaTilt.init(document.querySelectorAll(".img-phone"));
-        });
-    }
-    
-    getdata('xiaomi')
-    getdata('apple')
 </script>
 </html>
