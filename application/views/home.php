@@ -107,30 +107,30 @@
     <!-- End Main -->
 
     <!-- Start List Phone -->
-    <div class="list-phone w-full -mt-1/3 px-6 md:px-12">
+    <div class="w-full -mt-1/3 px-6 md:px-12">
         <div class="w-full">
             <input type="text" class="p-2 bg-transparent outline-none font-bold text-lg border-b-2 border-gray-300 dark:border-gray-700 transition-colors focus:border-orange duration-500 w-full" value="" placeholder="Cari Gadget">
         </div>
         <div class="py-6 w-full">
-            <div class="title flex items-center">
+            <div class="flex items-center">
                 <div class="uppercase font-bold text-lg ">xiaomi</div>
                 <div class="mx-4">|</div>
                 <div class="text-xs"><a href="javascript:;">View All</a></div>
             </div>
-            <div class="content grid grid-cols-2 md:grid-cols-5 gap-x-4 mt-4">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-x-4 mt-4">
                 <?php 
                     $cnt = 0;
                     $len = count($data_xiaomi) > 6 ? 6 : count($data_xiaomi);
                     for ($i = 0; $i < $len; $i++){
                         $cls = $i == ($len-1) ? 'block md:hidden' : ''
                 ?>
-                <div class="my-4 bg-white hover:-my-8 dark:bg-gray-700 p-4 rounded-lg <?= $cls ?>" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="<?= $cnt ?>">
-                    <a href="<?= base_url() ?>phone/<?= $data_xiaomi[$i]->Title ?>"><img class="img-phone rounded-xl mx-auto pb-4" style="transform-style: preserve-3d; transform: perspective(1000px);" src="<?= $data_xiaomi[$i]->Image ?>" alt="<?= $data_xiaomi[$i]->Title ?>"></a>
-                    <a class="name text-xs md:text-base" href="<?= base_url() ?>phone/<?= $data_xiaomi[$i]->Title ?>"><?= $data_xiaomi[$i]->Title ?></a>
+                <div class="my-4 bg-white dark:bg-gray-700 p-4 rounded-lg <?= $cls ?>" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="<?= $cnt ?>">
+                    <a href="<?= base_url() ?>phone/<?= $data_xiaomi[$i]->Title ?>"><img class="rounded-xl mx-auto pb-4" style="transform-style: preserve-3d; transform: perspective(1000px);" src="<?= $data_xiaomi[$i]->Image ?>" alt="<?= $data_xiaomi[$i]->Title ?>"></a>
+                    <a class="text-xs md:text-base" href="<?= base_url() ?>phone/<?= $data_xiaomi[$i]->Title ?>"><?= $data_xiaomi[$i]->Title ?></a>
                     <div class="mt-4 mb-2">
-                        <a class="name text-xs" href="<?= base_url() ?>phone/<?= $data_xiaomi[$i]->Title ?>">View Detail</a>
+                        <a class="text-xs" href="<?= base_url() ?>phone/<?= $data_xiaomi[$i]->Title ?>">View Detail</a>
                         <span class="px-2">|</span>
-                        <a class="name text-xs" href="<?= base_url() ?>phone/<?= $data_xiaomi[$i]->Title ?>">Share</a>
+                        <a class="text-xs" href="<?= base_url() ?>phone/<?= $data_xiaomi[$i]->Title ?>">Share</a>
                     </div>
                 </div>
                 <?php 
@@ -140,25 +140,25 @@
             </div>
         </div>
         <div class="py-6 w-full">
-            <div class="title flex items-center">
+            <div class="flex items-center">
                 <div class="uppercase font-bold text-lg ">apple</div>
                 <div class="mx-4">|</div>
                 <div class="text-xs"><a href="javascript:;">View All</a></div>
             </div>
-            <div class="content grid grid-cols-2 md:grid-cols-5 gap-x-4 mt-4">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-x-4 mt-4">
                 <?php 
                     $cnt = 0;
                     $len = count($data_apple) > 6 ? 6 : count($data_apple);
                     for ($i = 0; $i < $len; $i++){
                         $cls = $i == ($len-1) ? 'block md:hidden' : ''
                 ?>
-                <div class="my-4 bg-white hover:-my-8 dark:bg-gray-700 p-4 rounded-lg <?= $cls ?>" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="<?= $cnt ?>">
-                    <a href="<?= base_url() ?>phone/<?= $data_apple[$i]->Title ?>"><img class="img-phone rounded-xl mx-auto pb-4" style="transform-style: preserve-3d; transform: perspective(1000px);" src="<?= $data_apple[$i]->Image ?>" alt="<?= $data_apple[$i]->Title ?>"></a>
-                    <a class="name text-xs md:text-base" href="<?= base_url() ?>phone/<?= $data_apple[$i]->Title ?>"><?= $data_apple[$i]->Title ?></a>
+                <div class="my-4 bg-white dark:bg-gray-700 p-4 rounded-lg <?= $cls ?>" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="<?= $cnt ?>">
+                    <a href="<?= base_url() ?>phone/<?= $data_apple[$i]->Title ?>"><img class="rounded-xl mx-auto pb-4" style="transform-style: preserve-3d; transform: perspective(1000px);" src="<?= $data_apple[$i]->Image ?>" alt="<?= $data_apple[$i]->Title ?>"></a>
+                    <a class="text-xs md:text-base" href="<?= base_url() ?>phone/<?= $data_apple[$i]->Title ?>"><?= $data_apple[$i]->Title ?></a>
                     <div class="mt-4 mb-2">
-                        <a class="name text-xs" href="<?= base_url() ?>phone/<?= $data_apple[$i]->Title ?>">View Detail</a>
+                        <a class="text-xs" href="<?= base_url() ?>phone/<?= $data_apple[$i]->Title ?>">View Detail</a>
                         <span class="px-2">|</span>
-                        <a class="name text-xs" href="<?= base_url() ?>phone/<?= $data_apple[$i]->Title ?>">Share</a>
+                        <a class="text-xs" href="<?= base_url() ?>phone/<?= $data_apple[$i]->Title ?>">Share</a>
                     </div>
                 </div>
                 <?php 

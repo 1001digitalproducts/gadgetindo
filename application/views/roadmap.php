@@ -24,11 +24,11 @@
         <link rel="stylesheet" href="<?= base_url() ?>assets/css/custom.css">
     </noscript>
     <style>
-        .list-custom {
+        .<?= $class["list_custom"] ?> {
             list-style: none;
         }
 
-        .list-custom li::before {
+        .<?= $class["list_custom"] ?> li::before {
             list-style-position: inside;
             content: "o";
             color: #FF9E01;
@@ -36,7 +36,7 @@
             width: 1em;
         }
 
-        .list-custom .active::before {
+        .<?= $class["list_custom"] ?> .<?= $class["active"] ?>::before {
             font-weight: bold;
             content: "•";
             font-size: 20px;
@@ -44,7 +44,7 @@
             margin: auto;
         }
 
-        .roadmap-active {
+        .<?= $class["roadmap_active"] ?> {
             background: #FF9E01;
             box-shadow: 0 0 0 5px #FF9E0133, 0 0 0 10px #FF9E0122, 0 0 0 15px #FF9E0111;
         }
@@ -78,53 +78,19 @@
                 <div class="font-bold text-xl uppercase py-10">roadmap <span class="text-xs font-normal lowercase">(di update: 4 December 2021)</span></div>
                 <div class="border-2-2 absolute border-opacity-20 border-orange h-full md:w-full md:h-0 border"></div>
                 <div class="grid grid-cols-1 md:grid-cols-4 px-4 gap-x-8">
+                    <?php foreach($data as $item) { ?>
                     <div class="relative">
-                        <div class="absolute mt-8 -ml-8 md:block md:-mt-4 md:ml-0 z-20 border border-orange shadow-xl w-8 h-8 rounded-full roadmap-active"></div>
+                        <div class="absolute mt-8 -ml-8 md:block md:-mt-4 md:ml-0 z-20 border border-orange shadow-xl w-8 h-8 rounded-full <?= $item["active"] ? $class["roadmap_active"] : "bg-gray-100 dark:bg-gray-800" ?>"></div>
                         <div class="mt-4 py-4 px-4 md:px-0">
-                            <h3 class="mb-3 font-bold text-xl">Desember 2021</h3>
-                            <ul class="text-sm list-custom">
-                                <li class="active">Phone List</li>
-                                <li class="active">Phone Detail</li>
+                            <h3 class="mb-3 font-bold text-xl"><?= $item["title"] ?></h3>
+                            <ul class="text-sm <?= $class["list_custom"] ?>">
+                                <?php foreach($item["content"] as $list) { ?>
+                                <li <?= $list["active"] ? 'class="'.$class["active"].'"' : "" ?>><?= $list["label"] ?></li>
+                                <?php } ?>
                             </ul>
                         </div>
                     </div>
-                    <div class="relative">
-                        <div class="absolute mt-8 -ml-8 md:block md:-mt-4 md:ml-0 z-20 bg-gray-100 dark:bg-gray-800 border border-orange shadow-xl w-8 h-8 rounded-full"></div>
-                        <div class="mt-4 py-4 px-4 md:px-0">
-                            <h3 class="mb-3 font-bold text-xl">Januari 2022</h3>
-                            <ul class="text-sm list-custom">
-                                <li>Search, Filter & Share Phone</li>
-                                <li>All Phone</li>
-                                <li>Phone Compare</li>
-                                <li>History Log User</li>
-                                <li>History Page</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="relative">
-                        <div class="absolute mt-8 -ml-8 md:block md:-mt-4 md:ml-0 z-20 bg-gray-100 dark:bg-gray-800 border border-orange shadow-xl w-8 h-8 rounded-full"></div>
-                        <div class="mt-4 py-4 px-4 md:px-0">
-                            <h3 class="mb-3 font-bold text-xl">Februari 2022</h3>
-                            <ul class="text-sm list-custom">
-                                <li>Phone Compare</li>
-                                <li>Popular Phone</li>
-                                <li>Trending Phone</li>
-                                <li>Top 100 Phone</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="relative">
-                        <div class="absolute mt-8 -ml-8 md:block md:-mt-4 md:ml-0 z-20 bg-gray-100 dark:bg-gray-800 border border-orange shadow-xl w-8 h-8 rounded-full"></div>
-                        <div class="mt-4 py-4 px-4 md:px-0">
-                            <h3 class="mb-3 font-bold text-xl">Maret 2022</h3>
-                            <ul class="text-sm list-custom">
-                                <li>Blog</li>
-                                <li>News</li>
-                                <li>Prosesor List</li>
-                                <li>Prosesor Detail</li>
-                            </ul>
-                        </div>
-                    </div>
+                    <?php } ?>
                 </div>
             </div>
 
