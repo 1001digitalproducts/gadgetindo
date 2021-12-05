@@ -18,7 +18,6 @@
     <title>GadgetIndo - Home</title>
     <link rel="manifest" href="<?= base_url() ?>assets/manifest.json">
     <link href="<?= base_url() ?>assets/css/ouput.min.css" type="text/css" rel="stylesheet" />
-    <link href="<?= base_url() ?>assets/css/custom.css" type="text/css" rel="stylesheet" />
 
     <script>
         var base_url = "<?= base_url() ?>"
@@ -28,6 +27,11 @@
     <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    </noscript>
+
+    <link rel="preload" href="<?= base_url() ?>assets/css/custom.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="<?= base_url() ?>assets/css/custom.css">
     </noscript>
 </head>
 <body class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300">

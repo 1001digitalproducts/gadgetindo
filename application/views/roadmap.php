@@ -18,8 +18,11 @@
     <title>GadgetIndo - Roadmap</title>
     <link rel="manifest" href="<?= base_url() ?>assets/manifest.json">
     <link href="<?= base_url() ?>assets/css/ouput.min.css" type="text/css" rel="stylesheet" />
-    <link href="<?= base_url() ?>assets/css/custom.css" type="text/css" rel="stylesheet" />
 
+    <link rel="preload" href="<?= base_url() ?>assets/css/custom.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="<?= base_url() ?>assets/css/custom.css">
+    </noscript>
     <style>
         .list-custom {
             list-style: none;
