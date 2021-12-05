@@ -75,7 +75,7 @@
         <!-- Start Content -->
         <main class="flex px-4 md:px-24 py-6 w-full md:h-full md:items-center md:justify-center">
             <div class="w-full relative overflow-hidden pl-10">
-                <div class="font-bold text-xl uppercase py-10">roadmap <span class="text-xs font-normal lowercase">(di update: 4 December 2021)</span></div>
+                <div class="font-bold text-xl py-10">ROADMAP <span class="text-xs font-normal">(di update: <?= $updated ?>)</span></div>
                 <div class="border-2-2 absolute border-opacity-20 border-orange h-full md:w-full md:h-0 border"></div>
                 <div class="grid grid-cols-1 md:grid-cols-4 px-4 gap-x-8">
                     <?php foreach($data as $item) { ?>

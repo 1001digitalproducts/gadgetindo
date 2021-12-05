@@ -61,6 +61,8 @@ class Home extends CI_Controller {
 			"roadmap_active" => "_" . generateRandomString()
 		);
 
+		$data["updated"] = "4 December 2021";
+
 		$this->load->view('roadmap', $data);
 	}
 }
