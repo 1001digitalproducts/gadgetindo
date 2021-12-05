@@ -61,6 +61,11 @@
             text-shadow: 2px 2px 15px #FF9E01;
             margin: auto;
         }
+
+        .roadmap-active {
+            background: #FF9E01;
+            box-shadow: 0 0 0 5px #FF9E0133, 0 0 0 10px #FF9E0122, 0 0 0 15px #FF9E0111;
+        }
     </style>
     <script>
         var base_url = "<?= base_url() ?>"
@@ -92,7 +97,7 @@
                 <div class="border-2-2 absolute border-opacity-20 border-orange h-full md:w-full md:h-0 border"></div>
                 <div class="grid grid-cols-1 md:grid-cols-4 px-4 gap-x-8">
                     <div class="relative">
-                        <div class="absolute mt-8 -ml-8 md:block md:-mt-4 md:ml-0 z-20 bg-orange shadow-xl w-8 h-8 rounded-full"></div>
+                        <div class="absolute mt-8 -ml-8 md:block md:-mt-4 md:ml-0 z-20 border border-orange shadow-xl w-8 h-8 rounded-full roadmap-active"></div>
                         <div class="mt-4 py-4 px-4 md:px-0">
                             <h3 class="mb-3 font-bold text-xl">Desember 2021</h3>
                             <ul class="text-sm list-custom">

@@ -24,7 +24,6 @@
     </script>
     
     <script src="<?= base_url() ?>assets/js/darkmode.js" async></script>
-
     <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
@@ -107,7 +106,7 @@
         <div class="w-full">
             <input type="text" class="p-2 bg-transparent outline-none font-bold text-lg border-b-2 border-gray-300 dark:border-gray-700 transition-colors focus:border-orange duration-500 w-full" value="" placeholder="Cari Gadget">
         </div>
-        <div class="py-6 w-full div-xiaomi" data-aos="zoom-in" data-aos-duration="2000">
+        <div class="py-6 w-full div-xiaomi">
             <div class="title flex items-center">
                 <div class="uppercase font-bold text-lg ">xiaomi</div>
                 <div class="mx-4">|</div>
@@ -115,7 +114,7 @@
             </div>
             <div class="content grid grid-cols-2 md:grid-cols-5 gap-x-4 mt-4"></div>
         </div>
-        <div class="py-6 w-full div-apple" data-aos="zoom-in" data-aos-duration="2000">
+        <div class="py-6 w-full div-apple">
             <div class="title flex items-center">
                 <div class="uppercase font-bold text-lg ">apple</div>
                 <div class="mx-4">|</div>
@@ -155,11 +154,12 @@
         .then(data => {
             let len = data.length > 6 ? 6 : data.length
             let str = ""
+            let cnt = 500
             for (let i = 0; i < len ; i++) {
                 let item = data[i]
                 let cls = i == (len-1) ? 'block md:hidden' : ''
                 str += '' +
-                    '<div class="my-4 bg-white p-4 rounded-lg '+cls+'">' +
+                    '<div class="my-4 bg-white dark:bg-gray-700 p-4 rounded-lg '+cls+'" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="'+cnt+'">' +
                         '<a href="<?= base_url() ?>phone/'+ item.Title +'"><img class="img-phone rounded-xl mx-auto pb-4" style="transform-style: preserve-3d; transform: perspective(1000px);" src="'+item.Image+'" alt="'+item.Title+'"></a>' +
                         '<a class="name text-xs md:text-base" href="<?= base_url() ?>phone/'+ item.Title +'">' + item.Title + '</a>' +
                         '<div class="mt-4 mb-2">'+
@@ -168,6 +168,8 @@
                             '<a class="name text-xs" href="<?= base_url() ?>phone/'+ item.Title +'">Share</a>' +
                         '</div>' +
                     '</div>'
+                
+                cnt += 100
             }
 
             document.querySelector('.div-'+type+' .content').innerHTML = str
