@@ -13,6 +13,7 @@ class Home extends CI_Controller {
 
 	public function roadmap()
 	{
+		// Data RoadMap
 		$data = array("data" => array(
 			array(
 				"title" => "Desember 2020",
