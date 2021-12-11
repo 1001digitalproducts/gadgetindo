@@ -16,41 +16,50 @@ class Home extends CI_Controller {
 		// Data RoadMap
 		$data = array("data" => array(
 			array(
-				"title" => "Desember 2020",
+				"title" => "Q4 2021",
 				"content" => array(
-					array("label" => "Phone List", "active" => true),
-					array("label" => "Phone Detail", "active" => true)
+					array("label" => "Phone List & Detail", "active" => true)
 				),
 				"active" => true
 			),
 			array(
-				"title" => "Januari 2022",
+				"title" => "Q1 2022",
 				"content" => array(
-					array("label" => "Search, Filter & Share Phone", "active" => false),
 					array("label" => "All Phone", "active" => false),
-					array("label" => "Phone Compare", "active" => false),
-					array("label" => "History Log User", "active" => false),
-					array("label" => "History Page", "active" => false)
-				),
-				"active" => false
-			),
-			array(
-				"title" => "Februari 2022",
-				"content" => array(
+					array("label" => "Search, Filter & Share Phone", "active" => false),
 					array("label" => "Phone Compare", "active" => false),
 					array("label" => "Popular Phone", "active" => false),
 					array("label" => "Trending Phone", "active" => false),
-					array("label" => "Top 100 Phone", "active" => false)
+					array("label" => "Top 100 Phone", "active" => false),
+					array("label" => "GI-BOT Characters", "active" => false),
+					array("label" => "Blog, News", "active" => false),
+					array("label" => "Processor List & Detail", "active" => false)
 				),
 				"active" => false
 			),
 			array(
-				"title" => "Maret 2022",
+				"title" => "Q2 2022",
 				"content" => array(
-					array("label" => "Blog", "active" => false),
-					array("label" => "News", "active" => false),
-					array("label" => "Prosesor List", "active" => false),
-					array("label" => "Prosesor Detail", "active" => false)
+					array("label" => "360 Image Phone", "active" => false),
+					array("label" => "Motherboard List & Detail", "active" => false),
+					array("label" => "RAM List & Detail", "active" => false),
+					array("label" => "Beranda", "active" => false),
+					array("label" => "Member Area", "active" => false),
+					array("label" => "Forum", "active" => false),
+					array("label" => "Review", "active" => false),
+					array("label" => "Profile", "active" => false),
+					array("label" => "Login by Google & Facebook", "active" => false),
+				),
+				"active" => false
+			),
+			array(
+				"title" => "Q3 2022",
+				"content" => array(
+					array("label" => "VGA List & Detail", "active" => false),
+					array("label" => "Login by Twitter & Github", "active" => false),
+					array("label" => "Two Factor Authentication (2FA)", "active" => false),
+					array("label" => "User Level, Badge, Point", "active" => false),
+					array("label" => "Android Alpha!", "active" => false)
 				),
 				"active" => false
 			)

@@ -1,4 +1,16 @@
 <?php
+    if ( ! function_exists('base_api')) {
+        /**
+         * Base API
+         *
+         * @return	string
+         */
+        function base_api() {
+            $ci =& get_instance();
+            return $ci->config->config['base_api'];
+        }
+    }
+    
     if (!function_exists('call_api')) {
         function call_api($type = "GET", $url, $post = array()) {
             $res = array("status" => false, "message" => "", "data" => array());

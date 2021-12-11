@@ -29,4 +29,8 @@ function dark(on_load){
     }
 }
 
+function topFunc() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
 dark(true)
