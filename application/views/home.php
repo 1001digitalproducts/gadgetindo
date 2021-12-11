@@ -111,7 +111,7 @@
                             $cls = $i == ($len-1) ? 'block md:hidden' : ''
                     ?>
                     <div class="my-4 bg-white dark:bg-gray-700 p-4 rounded-lg <?= $cls ?>" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="<?= $cnt ?>">
-                        <a href="<?= base_url() ?>phone/<?= $i ?>"><img class="rounded-xl mx-auto pb-4" style="transform-style: preserve-3d; transform: perspective(1000px);" src="<?= $data_xiaomi[$i]->Image ?>" alt="<?= $data_xiaomi[$i]->Title ?>"></a>
+                        <a href="<?= base_url() ?>phone/<?= $i ?>"><img class="lazyload rounded-xl mx-auto pb-4" style="transform-style: preserve-3d; transform: perspective(1000px);" data-src="<?= $data_xiaomi[$i]->Image ?>" alt="<?= $data_xiaomi[$i]->Title ?>"></a>
                         <a class="text-xs md:text-base" href="<?= base_url() ?>phone/<?= $i ?>"><?= $data_xiaomi[$i]->Title ?></a>
                         <div class="mt-4 mb-2">
                             <a class="text-xs" href="<?= base_url() ?>phone/<?= $i ?>">View Detail</a>
@@ -139,7 +139,7 @@
                             $cls = $i == ($len-1) ? 'block md:hidden' : ''
                     ?>
                     <div class="my-4 bg-white dark:bg-gray-700 p-4 rounded-lg <?= $cls ?>" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="<?= $cnt ?>">
-                        <a href="<?= base_url() ?>phone/<?= $i ?>"><img class="rounded-xl mx-auto pb-4" style="transform-style: preserve-3d; transform: perspective(1000px);" src="<?= $data_apple[$i]->Image ?>" alt="<?= $data_apple[$i]->Title ?>"></a>
+                        <a href="<?= base_url() ?>phone/<?= $i ?>"><img class="lazyload rounded-xl mx-auto pb-4" style="transform-style: preserve-3d; transform: perspective(1000px);" data-src="<?= $data_apple[$i]->Image ?>" alt="<?= $data_apple[$i]->Title ?>"></a>
                         <a class="text-xs md:text-base" href="<?= base_url() ?>phone/<?= $i ?>"><?= $data_apple[$i]->Title ?></a>
                         <div class="mt-4 mb-2">
                             <a class="text-xs" href="<?= base_url() ?>phone/<?= $i ?>">View Detail</a>
@@ -159,7 +159,8 @@
 
     <?php $this->load->view('template/footer'); ?>
 </body>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" integrity="sha512-q583ppKrCRc7N5O0n2nzUiJ+suUv7Et1JGels4bXOaMFQcamPk9HjdUknZuuFjBNs7tsMuadge5k9RzdmO+1GQ==" crossorigin="anonymous" referrerpolicy="no-referrer" async></script>
 <script>
     AOS.init({
         once: true

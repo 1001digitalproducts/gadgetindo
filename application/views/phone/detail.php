@@ -70,7 +70,7 @@
         <div class="content mt-8 mb-16 gap-y-4">
             <div class="grid grid-cols-1 md:grid-cols-6 gap-x-4 gap-y-4">
                 <div class="flex md:col-span-3 justify-center md:justify-end">
-                    <img class="rounded-xl bg-white" src="<?= $phone_info[0]->image_url ?>" alt="">
+                    <img class="lazyload rounded-xl bg-white" data-src="<?= $phone_info[0]->image_url ?>" alt="">
                 </div>
                 <div class="border-2 p-2 rounded border-primary dark:border-orange text-primary dark:text-orange bg-blue-100 dark:bg-gray-900 md:col-span-2 text-xs md:text-lg">
                     <div class="div-released">
@@ -208,6 +208,7 @@
     <?php $this->load->view('template/footer'); ?>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" integrity="sha512-q583ppKrCRc7N5O0n2nzUiJ+suUv7Et1JGels4bXOaMFQcamPk9HjdUknZuuFjBNs7tsMuadge5k9RzdmO+1GQ==" crossorigin="anonymous" referrerpolicy="no-referrer" async></script>
 <script>
     $('.mytabs a').on('click', function() {
         var show_div = $(this).attr('attr-href')

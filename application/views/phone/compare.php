@@ -103,10 +103,10 @@
                             </tr>
                             <tr>
                                 <td class="pr-6">Network</td>
-                                <td class="pl-4"><img class="rounded-xl bg-white" src="https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-m4-pro-5g.jpg" alt=""></td>
-                                <td class="pl-4"><img class="rounded-xl bg-white" src="https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-m4-pro-5g.jpg" alt=""></td>
-                                <td class="pl-4"><img class="rounded-xl bg-white" src="https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-m4-pro-5g.jpg" alt=""></td>
-                                <td class="pl-4"><img class="rounded-xl bg-white" src="https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-m4-pro-5g.jpg" alt=""></td>
+                                <td class="pl-4"><img class="lazyload rounded-xl bg-white" data-src="https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-m4-pro-5g.jpg" alt=""></td>
+                                <td class="pl-4"><img class="lazyload rounded-xl bg-white" data-src="https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-m4-pro-5g.jpg" alt=""></td>
+                                <td class="pl-4"><img class="lazyload rounded-xl bg-white" data-src="https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-m4-pro-5g.jpg" alt=""></td>
+                                <td class="pl-4"><img class="lazyload rounded-xl bg-white" data-src="https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-m4-pro-5g.jpg" alt=""></td>
                             </tr>
                             <tr class="tr-network uppercase font-bold text-orange border-b-2 border-orange">
                                 <td class="border-b-2 border-orange absolute pt-8 bg-gray-100 dark:bg-gray-800 w-24">Network</td>
@@ -420,4 +420,5 @@
     </div>
     <!-- End Toggle Dark Mode -->
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" integrity="sha512-q583ppKrCRc7N5O0n2nzUiJ+suUv7Et1JGels4bXOaMFQcamPk9HjdUknZuuFjBNs7tsMuadge5k9RzdmO+1GQ==" crossorigin="anonymous" referrerpolicy="no-referrer" async></script>
 </html>
