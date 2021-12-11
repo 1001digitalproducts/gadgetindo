@@ -1,4 +1,4 @@
-<footer class="fixed bottom-0 bg-primary dark:bg-gray-900 p-4 border-t-2 border-gray-500 w-full text-gray-300 text-center">
+<footer class="fixed bottom-0 bg-primary dark:bg-gray-900 p-4 border-t-2 border-gray-500 w-full text-gray-300 text-center z-10">
     © 2021 All Right Reserved
 </footer>
 

@@ -70,7 +70,7 @@
         <div class="content mt-8 mb-16 gap-y-4">
             <div class="grid grid-cols-1 md:grid-cols-6 gap-x-4 gap-y-4">
                 <div class="flex md:col-span-3 justify-center md:justify-end">
-                    <img class="lazyload rounded-xl bg-white" data-src="<?= $phone_info[0]->image_url ?>" alt="">
+                    <img class="lazyload rounded-xl bg-white" style="width: 160xp; height: 212px;" data-src="<?= $phone_info[0]->image_url ?>" alt="">
                 </div>
                 <div class="border-2 p-2 rounded border-primary dark:border-orange text-primary dark:text-orange bg-blue-100 dark:bg-gray-900 md:col-span-2 text-xs md:text-lg">
                     <div class="div-released">

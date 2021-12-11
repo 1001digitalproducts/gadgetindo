@@ -17,22 +17,15 @@
     <meta name="msapplication-TileColor" content="#000000" />
     <title>GadgetIndo - Home</title>
     <link rel="manifest" href="<?= base_url() ?>assets/manifest.json">
-    <link href="<?= base_url() ?>assets/css/ouput.min.css" type="text/css" rel="stylesheet" />
 
     <script>
         var base_url = "<?= base_url() ?>"
     </script>
     
-    <script src="<?= base_url() ?>assets/js/darkmode.js" async></script>
+    <link href="<?= base_url() ?>assets/css/ouput.min.css" type="text/css" rel="stylesheet" />
     <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-    </noscript>
-
     <link rel="preload" href="<?= base_url() ?>assets/css/custom.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="<?= base_url() ?>assets/css/custom.css">
-    </noscript>
+    <script src="<?= base_url() ?>assets/js/darkmode.js" async></script>
 </head>
 <body class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300">
     <?php $this->load->view('template/header'); ?>
@@ -43,13 +36,13 @@
             <!-- Start Jumbotron -->
             <div class="relative landing text-gray-100 overflow-hidden h-96 md:h-screen">
                 <div class="w-full h-2/3 md:flex md:items-center">
-                    <div class="text-center md:text-left w-full md:w-1/2 py-12 md:p-12 mt-1/3" data-aos="fade-right" data-aos-duration="2000">
+                    <div class="text-center md:text-left w-full md:w-1/2 py-12 md:p-12 mt-1/3">
                         <div class="title uppercase font-bold text-2xl md:text-4xl p-4 md:pl-0">Selamat Datang di Platform Gadget Indonesia</div>
                         <div class="desc text-sm">Temukan Gadget yang kamu cari, dan sebarkan di media sosialmu !</div>
                     </div>
                     <div class="w-full md:w-1/2 grid grid-cols-3 md:grid-cols-1 gap-y-4 text-sm p-0 md:p-12">
                         <!-- Start Icon Search -->
-                        <div class="flex justify-center md:justify-start items-center gap-x-8" data-aos="fade-down" data-aos-duration="2000">
+                        <div class="flex justify-center md:justify-start items-center gap-x-8">
                             <div class="title uppercase font-bold text-lg border-2 rounded-full p-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -60,7 +53,7 @@
                         <!-- End Icon Search -->
 
                         <!-- Start Icon Filter -->
-                        <div class="flex justify-center md:justify-start items-center gap-x-8" data-aos="fade-down" data-aos-duration="2000" data-aos-delay="500">
+                        <div class="flex justify-center md:justify-start items-center gap-x-8">
                             <div class="title uppercase font-bold text-lg border-2 rounded-full p-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
@@ -71,7 +64,7 @@
                         <!-- End Icon Filter -->
 
                         <!-- Start Icon Share -->
-                        <div class="flex justify-center md:justify-start items-center gap-x-8" data-aos="fade-down" data-aos-duration="2000" data-aos-delay="1000">
+                        <div class="flex justify-center md:justify-start items-center gap-x-8">
                             <div class="title uppercase font-bold text-lg border-2 rounded-full p-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
@@ -111,7 +104,7 @@
                             $cls = $i == ($len-1) ? 'block md:hidden' : ''
                     ?>
                     <div class="my-4 bg-white dark:bg-gray-700 p-4 rounded-lg <?= $cls ?>" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="<?= $cnt ?>">
-                        <a href="<?= base_url() ?>phone/<?= $i ?>"><img class="lazyload rounded-xl mx-auto pb-4" style="transform-style: preserve-3d; transform: perspective(1000px);" data-src="<?= $data_xiaomi[$i]->Image ?>" alt="<?= $data_xiaomi[$i]->Title ?>"></a>
+                        <a href="<?= base_url() ?>phone/<?= $i ?>"><img class="lazyload rounded-xl mx-auto pb-4" style="width: 160xp; height: 212px;" data-src="<?= $data_xiaomi[$i]->Image ?>" alt="<?= $data_xiaomi[$i]->Title ?>"></a>
                         <a class="text-xs md:text-base" href="<?= base_url() ?>phone/<?= $i ?>"><?= $data_xiaomi[$i]->Title ?></a>
                         <div class="mt-4 mb-2">
                             <a class="text-xs" href="<?= base_url() ?>phone/<?= $i ?>">View Detail</a>
@@ -139,7 +132,7 @@
                             $cls = $i == ($len-1) ? 'block md:hidden' : ''
                     ?>
                     <div class="my-4 bg-white dark:bg-gray-700 p-4 rounded-lg <?= $cls ?>" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="<?= $cnt ?>">
-                        <a href="<?= base_url() ?>phone/<?= $i ?>"><img class="lazyload rounded-xl mx-auto pb-4" style="transform-style: preserve-3d; transform: perspective(1000px);" data-src="<?= $data_apple[$i]->Image ?>" alt="<?= $data_apple[$i]->Title ?>"></a>
+                        <a href="<?= base_url() ?>phone/<?= $i ?>"><img class="lazyload rounded-xl mx-auto pb-4" style="width: 160xp; height: 212px;" data-src="<?= $data_apple[$i]->Image ?>" alt="<?= $data_apple[$i]->Title ?>"></a>
                         <a class="text-xs md:text-base" href="<?= base_url() ?>phone/<?= $i ?>"><?= $data_apple[$i]->Title ?></a>
                         <div class="mt-4 mb-2">
                             <a class="text-xs" href="<?= base_url() ?>phone/<?= $i ?>">View Detail</a>
@@ -165,5 +158,18 @@
     AOS.init({
         once: true
     });
+
+    (function() {
+        var script = document.createElement('script');
+        script.src = 'https://unpkg.com/web-vitals/dist/web-vitals.iife.js';
+        script.onload = function() {
+            // When loading `web-vitals` using a classic script, all the public
+            // methods can be found on the `webVitals` global namespace.
+            webVitals.getCLS(console.log);
+            webVitals.getFID(console.log);
+            webVitals.getLCP(console.log);
+        }
+        document.head.appendChild(script);
+    }())
 </script>
 </html>

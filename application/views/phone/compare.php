@@ -103,10 +103,10 @@
                             </tr>
                             <tr>
                                 <td class="pr-6">Network</td>
-                                <td class="pl-4"><img class="lazyload rounded-xl bg-white" data-src="https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-m4-pro-5g.jpg" alt=""></td>
-                                <td class="pl-4"><img class="lazyload rounded-xl bg-white" data-src="https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-m4-pro-5g.jpg" alt=""></td>
-                                <td class="pl-4"><img class="lazyload rounded-xl bg-white" data-src="https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-m4-pro-5g.jpg" alt=""></td>
-                                <td class="pl-4"><img class="lazyload rounded-xl bg-white" data-src="https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-m4-pro-5g.jpg" alt=""></td>
+                                <td class="pl-4"><img class="lazyload rounded-xl bg-white" style="width: 160xp; height: 212px;" data-src="https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-m4-pro-5g.jpg" alt=""></td>
+                                <td class="pl-4"><img class="lazyload rounded-xl bg-white" style="width: 160xp; height: 212px;" data-src="https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-m4-pro-5g.jpg" alt=""></td>
+                                <td class="pl-4"><img class="lazyload rounded-xl bg-white" style="width: 160xp; height: 212px;" data-src="https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-m4-pro-5g.jpg" alt=""></td>
+                                <td class="pl-4"><img class="lazyload rounded-xl bg-white" style="width: 160xp; height: 212px;" data-src="https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-m4-pro-5g.jpg" alt=""></td>
                             </tr>
                             <tr class="tr-network uppercase font-bold text-orange border-b-2 border-orange">
                                 <td class="border-b-2 border-orange absolute pt-8 bg-gray-100 dark:bg-gray-800 w-24">Network</td>
