@@ -52,7 +52,7 @@
     <link rel="manifest" href="<?= base_url() ?>manifest.json">
 
     <script>
-        var base_url = "http://localhost/Wildan/GadgetIndo/web-app/"
+        var base_url = "<?= base_url() ?>"
     </script>
 
     <link href="<?= base_url() ?>assets/css/output.min.css" type="text/css" rel="stylesheet" />
