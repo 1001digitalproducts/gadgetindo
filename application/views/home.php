@@ -22,7 +22,8 @@
         var base_url = "<?= base_url() ?>"
     </script>
     
-    <link href="<?= base_url() ?>assets/css/ouput.min.css" type="text/css" rel="stylesheet" />
+    <link href="<?= base_url() ?>assets/css/gi-style.css" type="text/css" rel="stylesheet" />
+    <link rel="preload" href="<?= base_url() ?>assets/css/ouput.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="<?= base_url() ?>assets/css/custom.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <script src="<?= base_url() ?>assets/js/darkmode.js" async></script>
@@ -155,21 +156,6 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" integrity="sha512-q583ppKrCRc7N5O0n2nzUiJ+suUv7Et1JGels4bXOaMFQcamPk9HjdUknZuuFjBNs7tsMuadge5k9RzdmO+1GQ==" crossorigin="anonymous" referrerpolicy="no-referrer" async></script>
 <script>
-    AOS.init({
-        once: true
-    });
-
-    (function() {
-        var script = document.createElement('script');
-        script.src = 'https://unpkg.com/web-vitals/dist/web-vitals.iife.js';
-        script.onload = function() {
-            // When loading `web-vitals` using a classic script, all the public
-            // methods can be found on the `webVitals` global namespace.
-            webVitals.getCLS(console.log);
-            webVitals.getFID(console.log);
-            webVitals.getLCP(console.log);
-        }
-        document.head.appendChild(script);
-    }())
+    AOS.init({once: true});
 </script>
 </html>
