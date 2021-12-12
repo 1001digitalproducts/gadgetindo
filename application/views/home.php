@@ -5,18 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Description" content="Informasi seluruh Gadget" />
+    <meta name="mobile-wep-app-capable" content="yes">
     <!-- Mendeklarasikan warna yang muncul pada address bar Chrome versi seluler -->
     <meta name="theme-color" content="11325B" />
     <!-- Mendeklarasikan ikon untuk iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="GadgetIndo" />
-    <link rel="apple-touch-icon" href="<?= base_url() ?>assets/image/icon/icon.png" />
+    <link rel="apple-touch-icon" href="<?= base_url() ?>assets/image/icon/mobile-alt-regular-72.png" />
+    <link rel="apple-touch-icon" href="<?= base_url() ?>assets/image/icon/mobile-alt-regular-96.png" />
+    <link rel="apple-touch-icon" href="<?= base_url() ?>assets/image/icon/mobile-alt-regular-132.png" />
+    <link rel="apple-touch-icon" href="<?= base_url() ?>assets/image/icon/mobile-alt-regular-144.png" />
+    <link rel="apple-touch-icon" href="<?= base_url() ?>assets/image/icon/mobile-alt-regular-156.png" />
+    <link rel="apple-touch-icon" href="<?= base_url() ?>assets/image/icon/mobile-alt-regular-192.png" />
+    <link rel="apple-touch-icon" href="<?= base_url() ?>assets/image/icon/mobile-alt-regular-240.png" />
     <!-- Mendeklarasikan ikon untuk Windows -->
-    <meta name="msapplication-TileImage" content="<?= base_url() ?>assets/image/icon/icon.png" />
+    <meta name="msapplication-TileImage" content="<?= base_url() ?>assets/image/icon/mobile-alt-regular-72.png" />
+    <meta name="msapplication-TileImage" content="<?= base_url() ?>assets/image/icon/mobile-alt-regular-96.png" />
+    <meta name="msapplication-TileImage" content="<?= base_url() ?>assets/image/icon/mobile-alt-regular-132.png" />
+    <meta name="msapplication-TileImage" content="<?= base_url() ?>assets/image/icon/mobile-alt-regular-144.png" />
+    <meta name="msapplication-TileImage" content="<?= base_url() ?>assets/image/icon/mobile-alt-regular-156.png" />
+    <meta name="msapplication-TileImage" content="<?= base_url() ?>assets/image/icon/mobile-alt-regular-192.png" />
+    <meta name="msapplication-TileImage" content="<?= base_url() ?>assets/image/icon/mobile-alt-regular-240.png" />
     <meta name="msapplication-TileColor" content="#000000" />
     <title>GadgetIndo - Home</title>
-    <link rel="manifest" href="<?= base_url() ?>assets/manifest.json">
+    <link rel="manifest" href="<?= base_url() ?>manifest.json">
 
     <script>
         var base_url = "<?= base_url() ?>"

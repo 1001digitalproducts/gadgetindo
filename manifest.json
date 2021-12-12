@@ -1,0 +1,43 @@
+{
+    "name": "GadgetIndo",
+    "short_name": "GadgetIndo",
+    "description": "Informasi seluruh Gadget",
+    "lang": "en-IND",
+    "dir": "ltr",
+    "theme_color": "#11325B",
+    "start_url": "/",
+    "scope": ".",
+    "background_color": "#f3f4f6",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "./assets/image/icon/mobile-alt-regular-72.png",
+            "type": "assets/image/png", "sizes": "72x72"
+        },
+        {
+            "src": "./assets/image/icon/mobile-alt-regular-96.png",
+            "type": "assets/image/png", "sizes": "96x96"
+        },
+        {
+            "src": "./assets/image/icon/mobile-alt-regular-132.png",
+            "type": "assets/image/png","sizes": "132x132"
+        },
+        {
+            "src": "./assets/image/icon/mobile-alt-regular-144.png",
+            "type": "assets/image/png", "sizes": "144x144"
+        },
+        {
+            "src": "./assets/image/icon/mobile-alt-regular-156.png",
+            "type": "assets/image/png", "sizes": "156x156"
+        },
+        {
+            "src": "./assets/image/icon/mobile-alt-regular-192.png",
+            "type": "assets/image/png", "sizes": "192x192"
+        },
+        {
+            "src": "./assets/image/icon/mobile-alt-regular-240.png",
+            "type": "image/png", "sizes": "240x240"
+        }
+    ]
+}
