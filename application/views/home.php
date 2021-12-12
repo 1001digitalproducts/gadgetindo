@@ -22,8 +22,7 @@
         var base_url = "<?= base_url() ?>"
     </script>
     
-    <link href="<?= base_url() ?>assets/css/gi-style.css" type="text/css" rel="stylesheet" />
-    <link rel="preload" href="<?= base_url() ?>assets/css/ouput.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link href="<?= base_url() ?>assets/css/output.min.css" type="text/css" rel="stylesheet" />
     <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="<?= base_url() ?>assets/css/custom.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <script src="<?= base_url() ?>assets/js/darkmode.js" async></script>

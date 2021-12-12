@@ -17,12 +17,14 @@
     <meta name="msapplication-TileColor" content="#000000" />
     <title>GadgetIndo - Roadmap</title>
     <link rel="manifest" href="<?= base_url() ?>assets/manifest.json">
-    <link href="<?= base_url() ?>assets/css/ouput.min.css" type="text/css" rel="stylesheet" />
 
+    <script>
+        var base_url = "<?= base_url() ?>"
+    </script>
+    
+    <link href="<?= base_url() ?>assets/css/output.min.css" type="text/css" rel="stylesheet" />
     <link rel="preload" href="<?= base_url() ?>assets/css/custom.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="<?= base_url() ?>assets/css/custom.css">
-    </noscript>
+    <script src="<?= base_url() ?>assets/js/darkmode.js" async></script>
     <style>
         .<?= $class["list_custom"] ?> {
             list-style: none;
@@ -49,10 +51,6 @@
             box-shadow: 0 0 0 5px #FF9E0133, 0 0 0 10px #FF9E0122, 0 0 0 15px #FF9E0111;
         }
     </style>
-    <script>
-        var base_url = "<?= base_url() ?>"
-    </script>
-    <script src="<?= base_url() ?>assets/js/darkmode.js" async></script>
 </head>
 <body class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300">
     <div class="flex flex-col h-screen">

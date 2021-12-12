@@ -2,6 +2,8 @@ const CACHE_NAME = 'CACHE-01';
 const toCache = [
     './',
     './assets/manifest.json',
+    './assets/css/output.min.css',
+    './assets/css/custom.css',
     './assets/js/darkmode.js',
     './assets/image/icon/icon.png',
 ];
