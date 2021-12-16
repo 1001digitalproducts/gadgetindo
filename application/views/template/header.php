@@ -1,4 +1,4 @@
-<header class="bg-dark-primary dark:bg-gray-900 px-12 py-8 w-full">
+<header class="bg-dark-primary dark:bg-gray-900 px-12 py-8 w-full shadow-2xl">
     <div class="grid grid-cols-1 md:grid-cols-2 uppercase text-orange font-bold ">
         <div class="w-full text-base md:text-2xl text-center md:text-left">
             <a href="<?= base_url() ?>">GadgetIndo</a>
