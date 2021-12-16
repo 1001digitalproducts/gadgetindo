@@ -116,7 +116,7 @@
                         for ($i = 1; $i < $len; $i++){
                             $cls = $i == ($len-1) ? 'block md:hidden' : ''
                     ?>
-                    <div class="my-4 bg-white dark:bg-gray-700 p-4 rounded-lg <?= $cls ?>" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="<?= $cnt ?>">
+                    <div class="my-4 bg-white dark:bg-gray-700 p-4 rounded-lg shadow-2xl <?= $cls ?>" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="<?= $cnt ?>">
                         <a href="<?= base_url() ?>phone/<?= $i ?>"><img class="lazyload rounded-xl mx-auto pb-4" style="width: 160xp; height: 212px;" data-src="<?= $data_xiaomi[$i]->Image ?>" alt="<?= $data_xiaomi[$i]->Title ?>"></a>
                         <a class="text-xs md:text-base" href="<?= base_url() ?>phone/<?= $i ?>"><?= $data_xiaomi[$i]->Title ?></a>
                         <div class="mt-4 mb-2">
@@ -144,7 +144,7 @@
                         for (; $i < $len; $i++){
                             $cls = $i == ($len-1) ? 'block md:hidden' : ''
                     ?>
-                    <div class="my-4 bg-white dark:bg-gray-700 p-4 rounded-lg <?= $cls ?>" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="<?= $cnt ?>">
+                    <div class="my-4 bg-white dark:bg-gray-700 p-4 rounded-lg shadow-2xl <?= $cls ?>" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="<?= $cnt ?>">
                         <a href="<?= base_url() ?>phone/<?= $i ?>"><img class="lazyload rounded-xl mx-auto pb-4" style="width: 160xp; height: 212px;" data-src="<?= $data_apple[$i]->Image ?>" alt="<?= $data_apple[$i]->Title ?>"></a>
                         <a class="text-xs md:text-base" href="<?= base_url() ?>phone/<?= $i ?>"><?= $data_apple[$i]->Title ?></a>
                         <div class="mt-4 mb-2">
