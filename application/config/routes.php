@@ -54,5 +54,9 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['roadmap'] = "home/roadmap";
+$route['brands'] = "home/brands";
+$route['our-team'] = "home/our_team";
 $route['phone/(:any)'] = "phone/detail/$1";
+$route['phone/list/(:any)'] = "phone/index_list/$1";
+$route['phone/brands/(:any)'] = "phone/index_brands/$1";
 $route['phone-compare/(:any)'] = "phone/compare/$1";

@@ -56,17 +56,18 @@
     </script>
 
     <link href="<?= base_url() ?>assets/css/output.min.css" type="text/css" rel="stylesheet" />
+    <!-- <link href="<?= base_url() ?>ui/assets/css/output-back.css" type="text/css" rel="stylesheet" /> -->
     <link rel="preload" href="<?= base_url() ?>assets/css/custom.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" as="style" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" onload="this.onload=null;this.rel='stylesheet'">
     <script src="<?= base_url() ?>assets/js/darkmode.js" async></script>
 </head>
-<body class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300">
+<body class="bg-background-default dark:bg-gray-800 text-gray-700 dark:text-gray-300">
     <?php $this->load->view('template/header'); ?>
 
     <main class="px-4 md:px-52 py-6">
         <div class="title grid grid-cols-1 md:grid-cols-2 text-xs md:text-base">
             <div class="flex items-center justify-center md:justify-start gap-x-6 md:gap-x-8">
-                <div class="uppercase font-bold text-base md:text-lg">xiaomi</div>
+                <div class="uppercase font-bold text-base md:text-lg"><?= $phone_info[0]->brand_name ?></div>
                 <div>|</div>
                 <div><?= $phone_info[0]->name ?></div>
                 <div>|</div>
@@ -81,7 +82,7 @@
         <div class="content mt-8 mb-16 gap-y-4">
             <div class="grid grid-cols-1 md:grid-cols-6 gap-x-4 gap-y-4">
                 <div class="flex md:col-span-3 justify-center md:justify-end">
-                    <img class="lazyload rounded-xl bg-white" style="width: 160xp; height: 212px;" data-src="<?= $phone_info[0]->image_url ?>" alt="">
+                    <img class="lazyload rounded-xl bg-white" style="width: 184px; height: 244px;" data-src="<?= $phone_info[0]->image_url ?>" alt="">
                 </div>
                 <div class="border-2 p-2 rounded border-primary dark:border-orange text-primary dark:text-orange bg-blue-100 dark:bg-gray-900 md:col-span-2 text-xs md:text-lg">
                     <div class="div-released">
@@ -91,22 +92,22 @@
                         <i class="fas fa-mobile-alt mr-2"></i>183g, 6.9mm thickness
                     </div>
                     <div class="div-operating-system">
-                        <i class="fas fa-angle-left"></i><i class="fas fa-angle-right mr-2"></i>Android 11, One UI 3.1.1
+                        <i class="fas fa-angle-left"></i><i class="fas fa-angle-right mr-2"></i><?= $additional_info->os ?>
                     </div>
                     <div class="div-memory">
-                        <i class="fas fa-microchip mr-2"></i>28GB/256GB storage, no card slot
+                        <i class="fas fa-microchip mr-2"></i><?= $additional_info->memory ?>
                     </div>
                     <div class="div-dimension font-bold">
-                        <i class="far fa-square mr-2"></i>6.7", 1080x2640 pixels
+                        <i class="far fa-square mr-2"></i><?= $additional_info->display ?>
                     </div>
                     <div class="div-camera font-bold">
-                        <i class="far fa-circle mr-2"></i>12 MP, 1080x2640 pixels
+                        <i class="far fa-circle mr-2"></i><?= $additional_info->main_camera ?>
                     </div>
-                    <div class="div-ram font-bold">
+                    <!-- <div class="div-ram font-bold">
                         <i class="fas fa-microchip mr-2"></i>8GB RAM, Snapdragon 888 5G
-                    </div>
+                    </div> -->
                     <div class="div-battery font-bold">
-                        <i class="fas fa-battery-full mr-2"></i>3300 mAh, Li-Po
+                        <i class="fas fa-battery-full mr-2"></i><?= $additional_info->battery ?>
                     </div>
                 </div>
             </div>

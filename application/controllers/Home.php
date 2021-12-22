@@ -3,11 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Home extends CI_Controller {
 
-	public function index()
-	{
-		$data = array("data_xiaomi" => array(), "data_apple" => array());
-		$data["data_xiaomi"] = call_api("GET", base_url() . "assets/json/data_xiaomi.json");
-		$data["data_apple"] = call_api("GET", base_url() . "assets/json/data_apple.json");
+	public function index(){
+		$data = call_api("GET", base_api() . "phone-lists");
 		$this->load->view('home', $data);
 	}
 
@@ -74,5 +71,20 @@ class Home extends CI_Controller {
 		$data["updated"] = "4 December 2021";
 
 		$this->load->view('roadmap', $data);
+	}
+
+	public function brands(){
+		$data = call_api("GET", base_api() . "brands");
+		$this->load->view('brands', $data);
+	}
+
+	public function our_team(){
+		$data = array("data" => array(
+			(object)array("name" => "Hermawan", "position" => "CEO"), 
+			(object)array("name" => "Wildan", "position" => "COO"), 
+			(object)array("name" => "Yasir", "position" => "CTO"), 
+			(object)array("name" => "Syifa", "position" => "CMO")
+		));
+		$this->load->view('our-team', $data);
 	}
 }

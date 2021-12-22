@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="List Phone by Brands GadgetIndo" />
+    <meta name="mobile-wep-app-capable" content="yes">
+    <!-- Mendeklarasikan warna yang muncul pada address bar Chrome versi seluler -->
+    <meta name="theme-color" content="11325B" />
+    <!-- Mendeklarasikan ikon untuk iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="List Phone by Brands GadgetIndo" />
+    <link rel="apple-touch-icon" href="http://localhost/Wildan/GadgetIndo/web-app/assets/image/icon/mobile-alt-regular-72.png" />
+    <link rel="apple-touch-icon" href="http://localhost/Wildan/GadgetIndo/web-app/assets/image/icon/mobile-alt-regular-96.png" />
+    <link rel="apple-touch-icon" href="http://localhost/Wildan/GadgetIndo/web-app/assets/image/icon/mobile-alt-regular-132.png" />
+    <link rel="apple-touch-icon" href="http://localhost/Wildan/GadgetIndo/web-app/assets/image/icon/mobile-alt-regular-144.png" />
+    <link rel="apple-touch-icon" href="http://localhost/Wildan/GadgetIndo/web-app/assets/image/icon/mobile-alt-regular-156.png" />
+    <link rel="apple-touch-icon" href="http://localhost/Wildan/GadgetIndo/web-app/assets/image/icon/mobile-alt-regular-192.png" />
+    <link rel="apple-touch-icon" href="http://localhost/Wildan/GadgetIndo/web-app/assets/image/icon/mobile-alt-regular-240.png" />
+    <!-- Mendeklarasikan ikon untuk Windows -->
+    <meta name="msapplication-TileImage" content="http://localhost/Wildan/GadgetIndo/web-app/assets/image/icon/mobile-alt-regular-72.png" />
+    <meta name="msapplication-TileImage" content="http://localhost/Wildan/GadgetIndo/web-app/assets/image/icon/mobile-alt-regular-96.png" />
+    <meta name="msapplication-TileImage" content="http://localhost/Wildan/GadgetIndo/web-app/assets/image/icon/mobile-alt-regular-132.png" />
+    <meta name="msapplication-TileImage" content="http://localhost/Wildan/GadgetIndo/web-app/assets/image/icon/mobile-alt-regular-144.png" />
+    <meta name="msapplication-TileImage" content="http://localhost/Wildan/GadgetIndo/web-app/assets/image/icon/mobile-alt-regular-156.png" />
+    <meta name="msapplication-TileImage" content="http://localhost/Wildan/GadgetIndo/web-app/assets/image/icon/mobile-alt-regular-192.png" />
+    <meta name="msapplication-TileImage" content="http://localhost/Wildan/GadgetIndo/web-app/assets/image/icon/mobile-alt-regular-240.png" />
+    <meta name="msapplication-TileColor" content="#000000" />
+    <title>GadgetIndo - List Phone by Brands</title>
+    <link rel="manifest" href="http://localhost/Wildan/GadgetIndo/web-app/manifest.json">
+
+    <script>
+        var base_url = "http://localhost/Wildan/GadgetIndo/web-app/"
+    </script>
+    
+    <!-- <link href="http://localhost/Wildan/GadgetIndo/web-app/assets/css/output.min.css" type="text/css" rel="stylesheet" /> -->
+    <link href="./assets/css/output.css" type="text/css" rel="stylesheet" />
+    <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="http://localhost/Wildan/GadgetIndo/web-app/assets/css/custom.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-autocomplete/1.0.7/jquery.auto-complete.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <script src="http://localhost/Wildan/GadgetIndo/web-app/assets/js/darkmode.js" async></script>
+    <style>
+        .autocomplete-suggestions {
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300">
+    <header class="backdrop-filter backdrop-blur-md px-12 py-8 pb-10 md:pb-8 bg-white dark:bg-gray-800 w-full shadow-lg fixed z-50">
+    <div class="grid grid-cols-1 md:grid-cols-2 uppercase text-orange font-bold ">
+        <div class="w-full text-base md:text-2xl text-center md:text-left">
+            <a href="http://localhost/Wildan/GadgetIndo/web-app/">GadgetIndo</a>
+        </div>
+        <div class="w-full mt-8 md:mt-0 text-xs md:text-sm flex items-center justify-center md:justify-end gap-8 md:gap-16">
+            <a href="http://localhost/Wildan/GadgetIndo/web-app/">Home</a>
+            <a href="http://localhost/Wildan/GadgetIndo/web-app/brands">Brands</a>
+            <a href="http://localhost/Wildan/GadgetIndo/web-app/roadmap">Roadmap</a>
+            <!-- <a href="http://localhost/Wildan/GadgetIndo/web-app/our-team">About</a> -->
+        </div>
+    </div>
+</header>
+<div class="w-full h-36 md:h-24"></div>    
+    <main class="mt-8">
+        <div class="container-list w-full -mt-1/3 px-6 md:px-12 mb-16">
+            <div class="w-full">
+                <input type="text" class="q-search p-2 bg-transparent outline-none font-bold text-lg border-b-2 border-gray-300 dark:border-gray-700 transition-colors focus:border-orange duration-500 w-full" value="" placeholder="Cari Gadget">
+            </div>
+            <div class="py-6 w-full">
+                <div class="list grid grid-cols-2 md:grid-cols-5 gap-x-4 mt-4"></div>
+                <div></div>
+                <div class="div-pagination flex items-center md:justify-start justify-center z-10">
+                    <nav>
+                        <ul class="inline-flex space-x-2"></ul>
+                    </nav>
+                    <div class="ml-4 total-pages"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="fixed bottom-0 bg-white dark:bg-gray-800 shadow-lg p-4 w-full text-center z-50 text-orange">
+    © 2021 All Right Reserved
+</footer>
+
+<div class="fixed top-10 md:top-20 right-10 inline-block w-5 md:w-10 select-none z-50">
+    <button type="button" onclick="dark()" class="appearance-none cursor-pointer rounded-full p-2 bg-gray-100 text-gray-700 dark:text-gray-300 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-800">
+        <svg xmlns="http://www.w3.org/2000/svg" class="block dark:hidden h-3 md:h-6 w-3 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        </svg>
+        
+        <svg class="hidden dark:block h-3 md:h-6 w-3 md:w-6 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+    </button>
+</div>
+
+<div class="fixed bottom-10 right-10 inline-block w-5 md:w-10 select-none z-50">
+    <button type="button" onclick="topFunc()" class="appearance-none cursor-pointer rounded-full p-2 bg-gray-100 text-gray-700 dark:text-gray-300 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-800">
+        <svg class="h-3 md:h-6 w-3 md:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+    </button>
+</div></body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" integrity="sha512-q583ppKrCRc7N5O0n2nzUiJ+suUv7Et1JGels4bXOaMFQcamPk9HjdUknZuuFjBNs7tsMuadge5k9RzdmO+1GQ==" crossorigin="anonymous" referrerpolicy="no-referrer" async></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-autocomplete/1.0.7/jquery.auto-complete.min.js" integrity="sha512-TToQDr91fBeG4RE5RjMl/tqNAo35hSRR4cbIFasiV2AAMQ6yKXXYhdSdEpUcRE6bqsTiB+FPLPls4ZAFMoK5WA==" crossorigin="anonymous" referrerpolicy="no-referrer" async></script>
+<script>
+    AOS.init({once: true});
+
+    var is_load = false
+    var page = 1
+    var limit = 10
+    var cnt = 3
+
+    $(function(){
+
+        function genPagination(total){
+            var html = ''
+            var last = Math.ceil(total/limit)
+            var others = '<li><button class="w-10 h-10 rounded-full focus:shadow-outline">...</button></li>'
+
+            page = parseInt(page)
+
+            var prev = page > 1 ? page - 1 : 0
+            var curr = page
+            var next = page < last ? page + 1 : 0
+
+            var html_prevpage = prev != 0 ? '<li><button data-page="'+prev+'" class="page w-10 h-10 rounded-full focus:shadow-outline hover:bg-gray-200 dark:hover:bg-gray-900 dark:text-orange">' + prev + '</button></li>' : ''
+            var html_currpage = '<li><button class="w-10 h-10 text-white bg-orange rounded-full focus:shadow-outline">' + curr + '</button></li>'
+            var html_nextpage = next != 0 ? '<li><button data-page="'+next+'" class="page w-10 h-10 rounded-full focus:shadow-outline hover:bg-gray-200 dark:hover:bg-gray-900 dark:text-orange">' + next + '</button></li>' : ''
+
+            var html_prev = ''
+            var html_next = ''
+
+            if (curr == 1){
+                html_nextpage += '<li><button data-page="'+(curr+2)+'" class="page w-10 h-10 rounded-full focus:shadow-outline hover:bg-gray-200 dark:hover:bg-gray-900 dark:text-orange">' + (curr+2) + '</button></li>'
+            } 
+            
+            if (curr == last) {
+                html_prevpage = '<li><button data-page="'+(curr-2)+'" class="page w-10 h-10 rounded-full focus:shadow-outline hover:bg-gray-200 dark:hover:bg-gray-900 dark:text-orange">' + (curr-2) + '</button></li>' + html_prevpage
+            }
+
+            html_prev = `
+                <li>
+                    <button class="prev-page flex items-center justify-center w-10 h-10 rounded-full bg-white dark:bg-gray-700 ` + (curr != 1 ? 'focus:shadow-outline hover:bg-gray-200 dark:hover:bg-gray-900' : '' ) + `" `+(curr == 1 ? 'disabled' : '')+` >
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 dark:fill-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                </li>`
+            
+            html_next = `
+                <li>
+                    <button class="next-page flex items-center justify-center w-10 h-10 rounded-full bg-white dark:bg-gray-700 ` + (curr != last ? 'focus:shadow-outline hover:bg-gray-200 dark:hover:bg-gray-900' : '' ) + `" `+(curr == last ? 'disabled' : '')+` >
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 dark:fill-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </li>`
+            
+            html = `
+                <li>
+                    <button class="first-page flex items-center justify-center w-10 h-10 rounded-full bg-white dark:bg-gray-700 focus:shadow-outline hover:bg-gray-200 dark:hover:bg-gray-900">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 dark:fill-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
+                        </svg>
+                    </button>
+                </li>
+                ${html_prev} 
+                ${html_prevpage} 
+                ${html_currpage} 
+                ${html_nextpage} 
+                ${html_next}
+                <li>
+                    <button class="last-page flex items-center justify-center w-10 h-10 rounded-full bg-white dark:bg-gray-700 focus:shadow-outline hover:bg-gray-200 dark:hover:bg-gray-900">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 dark:fill-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </li>
+            `
+            
+            $('.div-pagination nav ul').empty().html(html)
+            $('.total-pages').html(last + " pages")
+
+            $('.next-page').on('click', () => {
+                page++
+                getData()
+            })
+
+            $('.prev-page').on('click', () => {
+                page--
+                getData()
+            })
+
+            $('.first-page').on('click', () => {
+                page = 1
+                getData()
+            })
+
+            $('.last-page').on('click', () => {
+                page = last
+                getData()
+            })
+
+            $('.page').on('click', function () {
+                var tmp = $(this).attr('data-page')
+                page = tmp
+                getData()
+            })
+        }
+
+        function getData(){
+            var url = 'https://api.gadgetindo.com/phones/search'
+            $.post(url, { page: page, limit: limit,  search: 'oppo'  },
+            (res) => {
+                var html = ''
+                var cnt = 0
+                res.data.forEach((e, idx) => {
+                    html += `
+                        <div class="flex flex-col my-4 bg-white dark:bg-gray-700 p-4 rounded-lg shadow-lg" data-aos="fade-down" data-aos-duration="2000" data-aos-delay="${cnt}">
+                            <a class="order-1 md:order-2" href="http://localhost/Wildan/GadgetIndo/web-app/phone/${e.id}">
+                                <img class="lazyload rounded-xl mx-auto pb-4" style="width: 160xp; height: 212px;" data-src="${e.image_url}" alt="${e.name}">
+                            </a>
+                            <a class="order-2 md:order-1 my-2 text-center text-xs md:text-base w-full" href="http://localhost/Wildan/GadgetIndo/web-app/phone/${e.id}">${e.name.toUpperCase()}</a>
+                            <div class="order-last mx-2 mt-4 md:mt-0 mx-auto">
+                                <a class="text-xs" href="http://localhost/Wildan/GadgetIndo/web-app/phone/${e.id}">View Detail</a>
+                                <span class="px-2">|</span>
+                                <a class="text-xs" href="http://localhost/Wildan/GadgetIndo/web-app/phone/${e.id}">Share</a>
+                            </div>
+                        </div>
+                    `
+                    cnt += 100
+                })
+
+                $('.container-list .list').html(html)
+                genPagination(res.total)
+            })
+        }
+
+        $('.q-search').on('click', () => {
+            if (is_load) return false
+
+            is_load = true
+            $('.q-search').autoComplete({
+                source: function(term, response){  
+                    $.post("https://api.gadgetindo.com/phones/search", { search: $('.q-search').val(), page: 1, limit: 5 },
+                    (res) => {
+                        let arr = []
+                        res.data.forEach(e => { arr.push(e.id + ":;" + e.name + ":;" + e.image_url) })
+                        arr.push("-:;View All")
+                        response(arr)
+                    })
+                },
+                renderItem: function (item, search){
+                    item = item.split(":;")
+                    var dataUrl = 'http://localhost/Wildan/GadgetIndo/web-app/phone/'+ item[0]
+                    var img = "<img src='"+item[2]+"' style='height: 83px;' alt='"+item[1]+"'>"
+                    if (item[0] == "-") {
+                        dataUrl = 'http://localhost/Wildan/GadgetIndo/web-app/phone/list/'+ search
+                        img = ""
+                    }
+                    return '<div class="autocomplete-suggestion dark:bg-gray-800 text-gray-700 dark:text-gray-300 pointer dark:hover:bg-transparent dark:hover:text-orange flex gap-4" style="padding: 2rem" data-url="'+dataUrl+'" data-val="'+search+'">'+img+item[1]+'</div>';
+                },
+                onSelect: function(e, term, item){
+                    window.location.href = item.data("url")
+                }
+            });
+
+            $('.autocomplete-suggestions').addClass('dark:bg-gray-800 text-gray-700 dark:text-gray-300')
+        })
+
+        getData()
+    })
+</script>
+</html>

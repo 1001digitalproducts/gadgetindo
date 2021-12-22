@@ -2,7 +2,16 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Phone extends CI_Controller {
-	public function detail($sfx)
+
+	public function index_brands($brand_id){
+		$this->load->view('phone/list', array("brand_id" => urldecode($brand_id), "search" => ""));
+	}
+
+	public function index_list($search){
+		$this->load->view('phone/list', array("brand_id" => "", "search" => urldecode($search)));
+	}
+
+	public function detail($slug)
 	{
 		$data = array(
 			"phone_info" => array(),
@@ -49,8 +58,8 @@ class Phone extends CI_Controller {
 			)
 		);
 
-		$res = call_api("GET", base_api() . "phones/$sfx");
-
+		$res = call_api("GET", base_api() . "phones/$slug");
+		
 		if ($res->status){
 			$res = $res->data;
 			$data["phone_info"] = $res->phone_info;
@@ -71,6 +80,12 @@ class Phone extends CI_Controller {
 
 			if (count($res->phone_launchs) > 1) {
 				$data["additional_info"]->release = $res->phone_launchs[1]->value;
+				$data["additional_info"]->os = $res->phone_platforms[0]->value;
+				$data["additional_info"]->memory = $res->phone_memorys[1]->value;
+				$data["additional_info"]->display = $res->phone_displays[2]->value;
+				$data["additional_info"]->main_camera = $res->phone_main_cameras[1]->value;
+				$data["additional_info"]->battery = $res->phone_batterys[0]->value;
+				
 			}
 
 		}
