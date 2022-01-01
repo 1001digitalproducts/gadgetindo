@@ -46,7 +46,8 @@
 
         .<?= $class["list_custom"] ?> li::before {
             list-style-position: inside;
-            content: "\1F7AC";
+            content: "\00D7";
+            font-size: 25px;
             color: #FF9E01;
             display: inline-block; 
             width: 1em;

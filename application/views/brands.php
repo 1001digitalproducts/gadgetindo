@@ -40,6 +40,11 @@
     <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="<?= base_url() ?>assets/css/custom.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <script src="<?= base_url() ?>assets/js/darkmode.js" async></script>
+    <style>
+        img.myimg[src=""] {
+            content:url("https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg");
+        }
+    </style>
 </head>
 <body class="bg-background-default dark:bg-gray-800 text-gray-700 dark:text-gray-300">
     <?php $this->load->view('template/header'); ?>
@@ -47,14 +52,14 @@
     <main>
         <div class="w-full -mt-1/3 px-6 md:px-12 mb-16">
             <div class="py-6 w-full">
-                <div class="grid grid-cols-1 md:grid-cols-5 gap-x-4 mt-4">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-x-4 mt-4">
                     <?php 
                     
                     $cnt = 0;
                     foreach($data as $val) { 
                     ?>
                     <a class="my-4 bg-white dark:bg-gray-700 p-16 rounded-lg shadow-lg text-center text-2xl block hover:text-orange" data-aos="fade-up" data-aos-duration="2000"  data-aos-delay="<?= $cnt ?>" href="<?= base_url() ?>phone/brands/<?= $val->id ?>">
-                        <img src="<?= $val->image_url ?>" style="width: 222px; height: 222px;">
+                        <img src="<?= $val->image_url ?>" style="width: 222px; height: 222px;" class="myimg mx-auto">
                         <?= $val->name ?><br/>
                         <span class="text-base"><?= $val->total_phone ?></span>
                     </a>

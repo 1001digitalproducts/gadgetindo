@@ -36,7 +36,6 @@
     </script>
     
     <link href="<?= base_url() ?>assets/css/output.min.css" type="text/css" rel="stylesheet" />
-    <!-- <link href="<?= base_url() ?>ui/assets/css/output-back.css" type="text/css" rel="stylesheet" /> -->
     <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="<?= base_url() ?>assets/css/custom.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-autocomplete/1.0.7/jquery.auto-complete.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -97,7 +96,7 @@
                     </div>
                 </div>
                 <div class="absolute bottom-0 z-10 w-full">
-                    <svg class="fill-current text-gray-100 dark:text-gray-800" viewBox="10 -60 1870 190" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> 
+                    <svg class="fill-current text-background-default dark:text-gray-800" viewBox="10 -60 1870 190" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> 
                         <path d="M977.9,76.2 C475.2,-17.4 0.2,132.5 0.2,132.5 L0.2,275.5 L1891.3,275.5 L1891.3,0.7 C1891.3,0.7 1480.6,169.8 977.9,76.2 Z"></path> 
                     </svg>
                 </div>

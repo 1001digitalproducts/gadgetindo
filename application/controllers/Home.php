@@ -22,8 +22,8 @@ class Home extends CI_Controller {
 			array(
 				"title" => "Q1 2022",
 				"content" => array(
-					array("label" => "All Phone", "active" => false),
-					array("label" => "Search, Filter & Share Phone", "active" => false),
+					array("label" => "All Phone", "active" => true),
+					array("label" => "Search, Filter & Share Phone", "active" => true),
 					array("label" => "Phone Compare", "active" => false),
 					array("label" => "Popular Phone", "active" => false),
 					array("label" => "Trending Phone", "active" => false),
