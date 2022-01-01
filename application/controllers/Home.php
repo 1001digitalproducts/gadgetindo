@@ -8,6 +8,16 @@ class Home extends CI_Controller {
 		$this->load->view('home', $data);
 	}
 
+	public function get_index_html(){
+		save_to_file(base_url(), "home.html");
+		save_to_file(base_url() . "phone/1", "phone_detail.html");
+		save_to_file(base_url() . "phone/list/oppo", "phone_list.html");
+		save_to_file(base_url() . "roadmap", "roadmap.html");
+		save_to_file(base_url() . "our-team", "our-team.html");
+		echo "here :D";
+		die();
+	}
+
 	public function roadmap()
 	{
 		// Data RoadMap

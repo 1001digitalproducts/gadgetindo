@@ -62,4 +62,13 @@
             return $randomString;
         }
     }
+
+    if (!function_exists('save_to_file')){
+        function save_to_file($url, $file_name) {
+            if($file = file_get_contents($url)) {
+                $html_file_path = realpath(APPPATH.'../ui') . DIRECTORY_SEPARATOR . $file_name;
+                file_put_contents($html_file_path, $file);
+            }
+        }
+    }
 ?>

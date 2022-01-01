@@ -29,6 +29,7 @@
     <meta name="msapplication-TileImage" content="<?= base_url() ?>assets/image/icon/mobile-alt-regular-240.png" />
     <meta name="msapplication-TileColor" content="#000000" />
     <title>GadgetIndo - Our Team</title>
+    <link rel="icon" type="png" href="<?= base_url() ?>assets/image/icon/mobile-alt-regular-72.png">
     <link rel="manifest" href="<?= base_url() ?>manifest.json">
 
     <script>
