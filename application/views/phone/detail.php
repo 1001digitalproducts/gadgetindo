@@ -17,6 +17,22 @@
 
         return $res;
     }
+
+    $size_phone_networks = count($phone_networks);
+    $size_phone_launchs = count($phone_launchs);
+    $size_phone_bodys = count($phone_bodys);
+    $size_phone_displays = count($phone_displays);
+    $size_phone_platforms = count($phone_platforms);
+    $size_phone_memorys = count($phone_memorys);
+    $size_phone_main_cameras = count($phone_main_cameras);
+    $size_phone_front_cameras = count($phone_front_cameras);
+    $size_phone_sounds = count($phone_sounds);
+    $size_phone_commss = count($phone_commss);
+    $size_phone_features = count($phone_features);
+    $size_phone_batterys = count($phone_batterys);
+    $size_phone_miscs = count($phone_miscs);
+    $size_phone_tests = count($phone_tests);
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -86,129 +102,129 @@
                     <img class="lazyload rounded-xl bg-white" style="width: 184px; height: 244px;" data-src="<?= $phone_info[0]->image_url ?>" alt="">
                 </div>
                 <div class="border-2 p-2 rounded border-primary dark:border-orange text-primary dark:text-orange bg-blue-100 dark:bg-gray-900 md:col-span-2 text-xs md:text-lg">
-                    <div class="div-released">
+                    <div class="div-released <?= empty($additional_info->release) ? "hidden" : "" ?>">
                         <i class="far fa-calendar mr-2"></i><?= $additional_info->release ?>
                     </div>
                     <div class="div-weight">
                         <i class="fas fa-mobile-alt mr-2"></i>183g, 6.9mm thickness
                     </div>
-                    <div class="div-operating-system">
+                    <div class="div-operating-system <?= empty($additional_info->os) ? "hidden" : "" ?> ">
                         <i class="fas fa-angle-left"></i><i class="fas fa-angle-right mr-2"></i><?= $additional_info->os ?>
                     </div>
-                    <div class="div-memory">
+                    <div class="div-memory <?= empty($additional_info->memory) ? "hidden" : "" ?> ">
                         <i class="fas fa-microchip mr-2"></i><?= $additional_info->memory ?>
                     </div>
-                    <div class="div-dimension font-bold">
+                    <div class="div-dimension font-bold <?= empty($additional_info->display) ? "hidden" : "" ?> ">
                         <i class="far fa-square mr-2"></i><?= $additional_info->display ?>
                     </div>
-                    <div class="div-camera font-bold">
+                    <div class="div-camera font-bold <?= empty($additional_info->main_camera) ? "hidden" : "" ?> ">
                         <i class="far fa-circle mr-2"></i><?= $additional_info->main_camera ?>
                     </div>
                     <!-- <div class="div-ram font-bold">
                         <i class="fas fa-microchip mr-2"></i>8GB RAM, Snapdragon 888 5G
                     </div> -->
-                    <div class="div-battery font-bold">
+                    <div class="div-battery font-bold <?= empty($additional_info->battery) ? "hidden" : "" ?> ">
                         <i class="fas fa-battery-full mr-2"></i><?= $additional_info->battery ?>
                     </div>
                 </div>
             </div>
             <div class="flex items-center text-xs md:text-base my-8 gap-x-4 md:gap-x-8 p-4 uppercase overflow-auto whitespace-nowrap mytabs mytabs-nav">
                 <div><a href="javascript:;" attr-href="all" class="py-2 border-b-2 border-orange">all</a></div>
-                <div><a href="javascript:;" attr-href="<?= $class["network"] ?>">network</a></div>
-                <div><a href="javascript:;" attr-href="<?= $class["launch"] ?>">launch</a></div>
-                <div><a href="javascript:;" attr-href="<?= $class["body"] ?>">body</a></div>
-                <div><a href="javascript:;" attr-href="<?= $class["display"] ?>">display</a></div>
-                <div><a href="javascript:;" attr-href="<?= $class["platform"] ?>">platform</a></div>
-                <div><a href="javascript:;" attr-href="<?= $class["memory"] ?>">memory</a></div>
-                <div><a href="javascript:;" attr-href="<?= $class["main_camera"] ?>">main camera</a></div>
-                <div><a href="javascript:;" attr-href="<?= $class["front_camera"] ?>">selfie camera</a></div>
-                <div><a href="javascript:;" attr-href="<?= $class["sound"] ?>">sound</a></div>
-                <div><a href="javascript:;" attr-href="<?= $class["comms"] ?>">comms</a></div>
-                <div><a href="javascript:;" attr-href="<?= $class["feature"] ?>">features</a></div>
-                <div><a href="javascript:;" attr-href="<?= $class["battery"] ?>">battery</a></div>
-                <div><a href="javascript:;" attr-href="<?= $class["misc"] ?>">misc</a></div>
-                <div><a href="javascript:;" attr-href="<?= $class["test"] ?>">tests</a></div>
+                <div class="<?= $size_phone_networks == 0 ? "hidden" : "" ?>"><a href="javascript:;" attr-href="<?= $class["network"] ?>">network</a></div>
+                <div class="<?= $size_phone_launchs == 0 ? "hidden" : "" ?>"><a href="javascript:;" attr-href="<?= $class["launch"] ?>">launch</a></div>
+                <div class="<?= $size_phone_bodys == 0 ? "hidden" : "" ?>"><a href="javascript:;" attr-href="<?= $class["body"] ?>">body</a></div>
+                <div class="<?= $size_phone_displays == 0 ? "hidden" : "" ?>"><a href="javascript:;" attr-href="<?= $class["display"] ?>">display</a></div>
+                <div class="<?= $size_phone_platforms == 0 ? "hidden" : "" ?>"><a href="javascript:;" attr-href="<?= $class["platform"] ?>">platform</a></div>
+                <div class="<?= $size_phone_memorys == 0 ? "hidden" : "" ?>"><a href="javascript:;" attr-href="<?= $class["memory"] ?>">memory</a></div>
+                <div class="<?= $size_phone_main_cameras == 0 ? "hidden" : "" ?>"><a href="javascript:;" attr-href="<?= $class["main_camera"] ?>">main camera</a></div>
+                <div class="<?= $size_phone_front_cameras == 0 ? "hidden" : "" ?>"><a href="javascript:;" attr-href="<?= $class["front_camera"] ?>">selfie camera</a></div>
+                <div class="<?= $size_phone_sounds == 0 ? "hidden" : "" ?>"><a href="javascript:;" attr-href="<?= $class["sound"] ?>">sound</a></div>
+                <div class="<?= $size_phone_commss == 0 ? "hidden" : "" ?>"><a href="javascript:;" attr-href="<?= $class["comms"] ?>">comms</a></div>
+                <div class="<?= $size_phone_features == 0 ? "hidden" : "" ?>"><a href="javascript:;" attr-href="<?= $class["feature"] ?>">features</a></div>
+                <div class="<?= $size_phone_batterys == 0 ? "hidden" : "" ?>"><a href="javascript:;" attr-href="<?= $class["battery"] ?>">battery</a></div>
+                <div class="<?= $size_phone_miscs == 0 ? "hidden" : "" ?>"><a href="javascript:;" attr-href="<?= $class["misc"] ?>">misc</a></div>
+                <div class="<?= $size_phone_tests == 0 ? "hidden" : "" ?>"><a href="javascript:;" attr-href="<?= $class["test"] ?>">tests</a></div>
             </div>
             <div class="mt-4 grid grid-cols-1 gap-4 mytabs-content">
-                <div class="div-<?= $class["network"] ?>">
+                <div class="div-<?= $class["network"] ?> <?= $size_phone_networks == 0 ? "hidden" : "" ?>">
                     <div class="uppercase font-bold text-orange border-b-2 border-orange">
                         network <i class="fas fa-wifi"></i>
                     </div>
                     <div><?= genHtml($phone_networks) ?></div>
                 </div>
-                <div class="div-<?= $class["launch"] ?>">
+                <div class="div-<?= $class["launch"] ?> <?= $size_phone_launchs == 0 ? "hidden" : "" ?>">
                     <div class="uppercase font-bold text-orange border-b-2 border-orange">
                         launch <i class="fas fa-rocket"></i>
                     </div>
                     <div><?= genHtml($phone_launchs) ?></div>
                 </div>
-                <div class="div-<?= $class["body"] ?>">
+                <div class="div-<?= $class["body"] ?> <?= $size_phone_bodys == 0 ? "hidden" : "" ?>">
                     <div class="uppercase font-bold text-orange border-b-2 border-orange">
                         body <i class="fas fa-mobile-alt"></i>
                     </div>
                     <div><?= genHtml($phone_bodys) ?></div>
                 </div>
-                <div class="div-<?= $class["display"] ?>">
+                <div class="div-<?= $class["display"] ?> <?= $size_phone_displays == 0 ? "hidden" : "" ?>">
                     <div class="uppercase font-bold text-orange border-b-2 border-orange">
                         display <i class="fas fa-square"></i>
                     </div>
                     <div><?= genHtml($phone_displays) ?></div>
                 </div>
-                <div class="div-<?= $class["platform"] ?>">
+                <div class="div-<?= $class["platform"] ?> <?= $size_phone_platforms == 0 ? "hidden" : "" ?>">
                     <div class="uppercase font-bold text-orange border-b-2 border-orange">
                         platform <i class="fas fa-angle-left"></i><i class="fas fa-angle-right"></i>
                     </div>
                     <div><?= genHtml($phone_platforms) ?></div>
                 </div>
-                <div class="div-<?= $class["memory"] ?>">
+                <div class="div-<?= $class["memory"] ?> <?= $size_phone_memorys == 0 ? "hidden" : "" ?>">
                     <div class="uppercase font-bold text-orange border-b-2 border-orange">
                         memory <i class="fas fa-microchip"></i>
                     </div>
                     <div><?= genHtml($phone_memorys) ?></div>
                 </div>
-                <div class="div-<?= $class["main_camera"] ?>">
+                <div class="div-<?= $class["main_camera"] ?> <?= $size_phone_main_cameras == 0 ? "hidden" : "" ?>">
                     <div class="uppercase font-bold text-orange border-b-2 border-orange">
                         main camera <i class="far fa-circle"></i>
                     </div>
                     <div><?= genHtml($phone_main_cameras) ?></div>
                 </div>
-                <div class="div-<?= $class["front_camera"] ?>">
+                <div class="div-<?= $class["front_camera"] ?> <?= $size_phone_front_cameras == 0 ? "hidden" : "" ?>">
                     <div class="uppercase font-bold text-orange border-b-2 border-orange">
                         front camera <i class="far fa-circle"></i>
                     </div>
                     <div><?= genHtml($phone_front_cameras) ?></div>
                 </div>
-                <div class="div-<?= $class["sound"] ?>">
+                <div class="div-<?= $class["sound"] ?> <?= $size_phone_sounds == 0 ? "hidden" : "" ?>">
                     <div class="uppercase font-bold text-orange border-b-2 border-orange">
                         sound <i class="fas fa-volume-up"></i>
                     </div>
                     <div><?= genHtml($phone_sounds) ?></div>
                 </div>
-                <div class="div-<?= $class["comms"] ?>">
+                <div class="div-<?= $class["comms"] ?> <?= $size_phone_commss == 0 ? "hidden" : "" ?>">
                     <div class="uppercase font-bold text-orange border-b-2 border-orange">
                         comms <i class="fab fa-creative-commons-share"></i>
                     </div>
                     <div><?= genHtml($phone_commss) ?></div>
                 </div>
-                <div class="div-<?= $class["feature"] ?>">
+                <div class="div-<?= $class["feature"] ?> <?= $size_phone_features == 0 ? "hidden" : "" ?>">
                     <div class="uppercase font-bold text-orange border-b-2 border-orange">
                         feature <i class="fas fa-asterisk"></i>
                     </div>
                     <div><?= genHtml($phone_features) ?></div>
                 </div>
-                <div class="div-<?= $class["battery"] ?>">
+                <div class="div-<?= $class["battery"] ?> <?= $size_phone_batterys == 0 ? "hidden" : "" ?>">
                     <div class="uppercase font-bold text-orange border-b-2 border-orange">
                         battery <i class="fas fa-battery-full"></i>
                     </div>
                     <div><?= genHtml($phone_batterys) ?></div>
                 </div>
-                <div class="div-<?= $class["misc"] ?>">
+                <div class="div-<?= $class["misc"] ?> <?= $size_phone_miscs == 0 ? "hidden" : "" ?>">
                     <div class="uppercase font-bold text-orange border-b-2 border-orange">
                         misc <i class="fas fa-mobile-alt"></i>
                     </div>
                     <div><?= genHtml($phone_miscs) ?></div>
                 </div>
-                <div class="div-<?= $class["test"] ?>">
+                <div class="div-<?= $class["test"] ?> <?= $size_phone_tests == 0 ? "hidden" : "" ?>">
                     <div class="uppercase font-bold text-orange border-b-2 border-orange">
                         test <i class="fas fa-microchip"></i>
                     </div>

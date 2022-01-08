@@ -31,12 +31,10 @@ class Phone extends CI_Controller {
 			"phone_tests" => array(),
 			"additional_info" => (object)array(
 				"release" => "", 
-				"weight" => "", 
 				"os" => "", 
-				"storage" => "",
-				"dimension" => "",
-				"camera" => "",
-				"ram" => "",
+				"memory" => "", 
+				"display" => "",
+				"main_camera" => "",
 				"battery" => ""
 			),
 			"class" => array(
@@ -78,15 +76,30 @@ class Phone extends CI_Controller {
 			$data["phone_miscs"] = $res->phone_miscs;
 			$data["phone_tests"] = $res->phone_tests;
 
-			if (count($res->phone_launchs) > 1) {
+			if (count($res->phone_launchs) >= 2) {
 				$data["additional_info"]->release = $res->phone_launchs[1]->value;
-				$data["additional_info"]->os = $res->phone_platforms[0]->value;
-				$data["additional_info"]->memory = $res->phone_memorys[1]->value;
-				$data["additional_info"]->display = $res->phone_displays[2]->value;
-				$data["additional_info"]->main_camera = $res->phone_main_cameras[1]->value;
-				$data["additional_info"]->battery = $res->phone_batterys[0]->value;
-				
 			}
+
+			if (count($res->phone_platforms) >= 1) {
+				$data["additional_info"]->os = $res->phone_platforms[0]->value;
+			}
+
+			if (count($res->phone_memorys) >= 2) {
+				$data["additional_info"]->memory = $res->phone_memorys[1]->value;
+			}
+
+			if (count($res->phone_displays) >= 3) {
+				$data["additional_info"]->display = $res->phone_displays[2]->value;
+			}
+
+			if (count($res->phone_main_cameras) >= 2) {
+				$data["additional_info"]->main_camera = $res->phone_main_cameras[1]->value;
+			}
+
+			if (count($res->phone_batterys) >= 1) {
+				$data["additional_info"]->battery = $res->phone_batterys[0]->value;
+			}
+
 
 		}
 
